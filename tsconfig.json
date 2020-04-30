@@ -6,10 +6,7 @@
     "emitDecoratorMetadata": true,
     "importHelpers": true,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
+    "lib": ["dom", "es2015"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -17,21 +14,10 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "noImplicitAny": false,
-    "types": [
-      "@types/meteor",
-      "@types/mocha",
-      "@types/chai",
-      "@types/sinon"
-    ]
+    "types": ["@types/meteor", "@types/mocha", "@types/chai", "@types/sinon"]
   },
-  "include": [
-    "imports/**/*.ts",
-    "client/**/*.ts",
-    "server/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["imports/**/*.ts", "client/**/*.ts", "server/**/*.ts"],
+  "exclude": ["node_modules"],
   "compileOnSave": false,
   "atom": {
     "rewriteTsconfig": false
