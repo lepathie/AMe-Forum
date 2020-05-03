@@ -1,13 +1,13 @@
-import '../polyfills.spec.ts';
+import '../polyfills.spec.ts'
 
-import { APP_BASE_HREF } from '@angular/common';
-import { getTestBed, TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
-import { By } from '@angular/platform-browser';
+import { APP_BASE_HREF } from '@angular/common'
+import { getTestBed, TestBed, async } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
+import { AppComponent } from './app.component'
+import { By } from '@angular/platform-browser'
 
-import { expect } from 'chai';
-import { spy } from 'sinon';
+import { expect } from 'chai'
+import { spy } from 'sinon'
 
 describe(`AppComponent`, () => {
 
@@ -22,22 +22,21 @@ describe(`AppComponent`, () => {
                 }
             ]
         })
-            .compileComponents(); // compile html and css
-    }));
+            .compileComponents() // compile html and css
+    }))
 
     afterEach(() => {
-        getTestBed().resetTestingModule();
-    });
+        getTestBed().resetTestingModule()
+    })
 
     it('should display h1 element', () => {
-        const fixture = TestBed.createComponent(AppComponent);
+        const fixture = TestBed.createComponent(AppComponent)
 
-        fixture.detectChanges();
+        fixture.detectChanges()
 
-        const h1 = fixture.debugElement.query(By.css('h1'));
+        const h1 = fixture.debugElement.query(By.css('h1'))
 
-        expect(h1.nativeElement.textContent).to.equal('AMe-Forum');
-    });
+        expect(h1.nativeElement.textContent).to.equal('AMe-Forum')
+    })
 
-
-});
+})

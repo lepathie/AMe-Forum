@@ -1,4 +1,5 @@
 export interface Topic {
-    _id?: string;
-    name?: string;
-  }
+    _id?: string
+    name?: string
+    description?: string
+}
