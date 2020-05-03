@@ -14,7 +14,7 @@ describe(`AppComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [RouterTestingModule],
-            declarations: [AppComponent], //declare test component
+            declarations: [AppComponent], // declare test component
             providers: [
                 {
                     provide: APP_BASE_HREF,
@@ -22,7 +22,7 @@ describe(`AppComponent`, () => {
                 }
             ]
         })
-            .compileComponents(); //compile html and css
+            .compileComponents(); // compile html and css
     }));
 
     afterEach(() => {
