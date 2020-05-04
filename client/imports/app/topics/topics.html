@@ -1,6 +1,11 @@
 <h2>Topics</h2>
-<ul>
-  <li *ngFor="let topic of topics | async">
-    {{ topic.title }}
-  </li>
-</ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngFor="let topic of topics | async">
+    <td>{{ topic.name }}</td>
+    <td>{{ topic.description }}</td>
+  </tr>
+</table>
