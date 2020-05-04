@@ -1,4 +1,4 @@
 export interface ThreadFollower {
-    UserId?: string
-    ThreadId?: string
+    userId?: string
+    threadId?: string
 }
