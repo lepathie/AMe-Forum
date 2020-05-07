@@ -34,6 +34,7 @@
     "@angular/compiler-cli": "9.1.4",
     "@types/chai": "4.2.11",
     "@types/meteor": "1.4.45",
+    "@types/meteor-roles": "^1.2.32",
     "@types/mocha": "7.0.2",
     "@types/sinon": "9.0.0",
     "chai": "4.2.0",

@@ -1,4 +1,5 @@
 import { Topics } from "imports/collections/topics"
+import _ from 'underscore'
 
 // This file contains the defaults for this AMe-Forum installation
 // Feel free to customize for your needs.
@@ -16,38 +17,41 @@ Meteor.startup(() => {
     _.each(
       [
         {
-          username: "user@user.de",
+          name: "Normal User",
           email: "user@user.de",
-          password: "sh7up#KT!",
-          profile: {
-            first_name: "",
-            last_name: "",
-            company: ""
-          }
+          roles: []
         },
         {
-          username: "admin@admin.de",
+          name: "Admin User",
           email: "admin@admin.de",
-          password: "sh7up#KT!",
-          profile: {
-            first_name: "",
-            last_name: "",
-            company: ""
-          }
+          roles: ['admin']
         },
         {
-          username: "mod@mod.de",
+          name: "Moderator User",
           email: "mod@mod.de",
-          password: "sh7up#KT!",
-          profile: {
-            first_name: "",
-            last_name: "",
-            company: ""
-          }
+          roles: ['mod']
         }
       ],
       (user) => {
-        Accounts.createUser(user)
+        let id
+        id = Accounts.createUser({
+          email: user.email,
+          password: "sh7up#KT!",
+          profile: {
+            name: user.name
+          }
+        })
+
+        // verify email
+        Meteor.users.update({ _id: id}, { $set: { 'emails.0.verified': true }})
+
+        // create roles if necessary
+        _.each(user.roles, (role) => {
+          Roles.createRole(role, { unlessExists: true })
+        })
+
+        // add user to roll
+        Roles.addUsersToRoles(id, user.roles)
       }
     )
   }
