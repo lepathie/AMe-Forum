@@ -17,6 +17,6 @@ export interface Forum {
             comment?: string
             userId?: string
             postTime?: Date
-        }] 
+        }]
     }]
 }
