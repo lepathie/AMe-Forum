@@ -7,6 +7,8 @@
     "test:ci": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs --once"
   },
   "dependencies": {
+    "@angular/animations": "^9.1.4",
+    "@angular/cdk": "^9.2.2",
     "@angular/common": "9.1.4",
     "@angular/compiler": "9.1.4",
     "@angular/core": "9.1.4",
@@ -16,6 +18,9 @@
     "@angular/platform-browser-dynamic": "9.1.4",
     "@angular/router": "9.1.4",
     "@babel/runtime": "7.9.6",
+    "angular2-meteor": "^0.8.0",
+    "angular2-meteor-accounts-ui": "^1.0.0",
+    "bcrypt": "^4.0.1",
     "codelyzer": "^5.2.2",
     "core-js": "2.5.7",
     "meteor-node-stubs": "1.0.0",
@@ -29,6 +34,7 @@
     "@angular/compiler-cli": "9.1.4",
     "@types/chai": "4.2.11",
     "@types/meteor": "1.4.45",
+    "@types/meteor-roles": "^1.2.32",
     "@types/mocha": "7.0.2",
     "@types/sinon": "9.0.0",
     "chai": "4.2.0",
