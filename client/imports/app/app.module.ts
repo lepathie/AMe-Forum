@@ -6,6 +6,7 @@ import { AppComponent } from './app.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { ForumComponent } from './forum/forum.component'
 import { TopicsComponent } from './topics/topics.component'
+import { AccountsModule } from 'angular2-meteor-accounts-ui'
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { TopicsComponent } from './topics/topics.component'
                 path: '**',
                 component: PageNotFoundComponent
             }
-        ])
+        ]),
+        AccountsModule
     ],
     declarations: [
         AppComponent,

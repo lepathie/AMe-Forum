@@ -1,2 +1,4 @@
 import './imports/methods/forums'
-// import publications
+import './imports/publications/topics'
+import './imports/methods/defaults'
+import './imports/publications/roles'
