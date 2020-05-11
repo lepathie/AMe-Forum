@@ -79,7 +79,8 @@ Meteor.methods({
           userId: user._id,
           postTime: new Date().getTime
         }
-        //
+        // Forums.update( { threads: { threadId: { threadId { $push: { "posts" : newPost}} } } } )
+        // Forums.find( { threads: { threadId: { threadId } } } )
         const index = { $indexOfArray: Forums.find( { threads: { threadId: { threadId } } } ) }
         const searchstring = "threads.".concat(index.toString() , ".posts" )
         return Forums.update({ _id: forumId}, { $push: { searchstring : newPost}})
