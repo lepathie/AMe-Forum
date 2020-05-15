@@ -1,8 +1,10 @@
 import { Topics } from "imports/collections/topics"
 import _ from 'underscore'
 
-// This file contains the defaults for this AMe-Forum installation
-// Feel free to customize for your needs.
+/**
+ *  @file This file contains the defaults for this AMe-Forum installation
+ *  Feel free to customize for your needs.
+ */
 
 Meteor.startup(() => {
   // Default topics
