@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { HeaderComponent } from './header/header.component'
+import { FooterComponent } from './footer/footer.component'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -58,7 +59,8 @@ export function createTranslateLoader(http: HttpClient) {
         HomeComponent,
         TopicsComponent,
         PageNotFoundComponent,
-        HeaderComponent
+        HeaderComponent,
+        FooterComponent
 
     ],
     bootstrap: [
