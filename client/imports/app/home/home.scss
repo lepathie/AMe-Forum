@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: 18px;
   justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
 
   @media only screen and (min-width: 900px) {
     flex-direction: row;
@@ -17,19 +19,29 @@
   }
 
   > {
-    background-clip: padding-box;
+    * {
+      flex: 1;
+      overflow-wrap: break-word;
+      background-clip: padding-box;
+    }
+
+    *:empty {
+      display: none;
+    }
 
     // This adds spacing between the elements (empty ones get ignored)
     *:not(:empty) ~ *:not(:empty) {
       border-top: 12px solid transparent;
     }
 
+    aside {
+      flex: 0.5;
+    }
+
     aside,
     main {
-      flex: none;
       display: flex;
       flex-direction: column;
-      align-self: center;
 
       // Smaller spacing inside
       *:not(:empty) ~ *:not(:empty) {
