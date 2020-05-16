@@ -18,6 +18,8 @@
     "@angular/platform-browser-dynamic": "9.1.4",
     "@angular/router": "9.1.4",
     "@babel/runtime": "7.9.6",
+    "@ngx-translate/core": "^12.1.2",
+    "@ngx-translate/http-loader": "^4.0.0",
     "angular2-meteor": "^0.8.0",
     "angular2-meteor-accounts-ui": "^1.0.0",
     "bcrypt": "^4.0.1",
