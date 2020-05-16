@@ -4,6 +4,12 @@ import { Posts } from "imports/collections/posts"
 import _ from 'underscore'
 
 Meteor.methods({
+    /**
+     * @function createForum Function to create a new forum
+     * @param _forumName Name of the new forum
+     * @param _description Description of the new forum
+     * @param _mod ID of the Administrator who created the forum
+     */
     createForum(_forumName: string, _description: string, _mod: string) {
 
     const user = Meteor.user()
@@ -28,38 +34,5 @@ Meteor.methods({
       mods: [_mod]
     })
     // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1})
-  },
-
-    createThread(_forumId: string, _threadName: string) {
-    const user = Meteor.user()
-    if (user === null) {
-      throw new Meteor.Error("You are not logged in!")
-      // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
-    }
-    if (_forumId === "") {
-      throw new Meteor.Error("ForumId is required!")
-    }
-    if (_threadName === "") {
-        throw new Meteor.Error("ThreadName is required!")
-      }
-
-    const timestamp = new Date()
-    return Threads.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
-  },
-
-    addPost(_threadId: string, _quotedPost: string, _quotedText: string, _comment: string) {
-    const user = Meteor.user()
-    if (user === null) {
-      throw new Meteor.Error("You are not logged in!")
-      // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
-    }
-    if (_threadId === "") {
-      throw new Meteor.Error("ThreadId is required!")
-    }
-    if (_comment === "") {
-      throw new Meteor.Error("Comment is required!")
-    }
-    const timestamp = new Date()
-    return Posts.insert({ threadId: _threadId, quotedPost: _quotedText, textQuoted: _quotedText, comment: _comment, userId: user._id, postTime: timestamp })
   }
 })

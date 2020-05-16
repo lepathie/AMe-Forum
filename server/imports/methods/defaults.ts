@@ -20,6 +20,7 @@ Meteor.startup(() => {
       Forums.insert({ _id: "TestId", active: false, name: "TestForum", description: "Forum zu Testzwecken", mods: ["keiner"]})
       Threads.insert({ _id: "TestId", forumId: "TestId" , name: "testThread", viewCounter: 0, followCounter: 0, date: new Date(), creator: "auto"})
       Posts.insert({ _id: "TestId", threadId: "TestId", quotedPost: "", textQuoted: "", comment: "TestKommentar", userId: "auto", postTime: new Date()})
+      Forums.insert({ active:  })
 
       // Methoden um zum erstellen eines Forums
       // const idforum = Meteor.call("createForum", "Forum1", "Testforum", "TestModeratorId")
