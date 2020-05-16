@@ -7,20 +7,11 @@ import _ from 'underscore'
 // This file contains the defaults for this AMe-Forum installation
 // Feel free to customize for your needs.
 
-Meteor.startup(() => {
-  // Default topics
-  if (Topics.find().cursor.count() === 0) {
-    _.each(["General Discussion", "Tutorials", "Help"], (topicName) => {
-      Topics.insert({ name: topicName })
-    })
-  }
-
   // Default forum Forums.find().cursor.count() === 0
-  if (1) {
+if (1) {
       Forums.insert({ _id: "TestId", active: false, name: "TestForum", description: "Forum zu Testzwecken", mods: ["keiner"]})
       Threads.insert({ _id: "TestId", forumId: "TestId" , name: "testThread", viewCounter: 0, followCounter: 0, date: new Date(), creator: "auto"})
       Posts.insert({ _id: "TestId", threadId: "TestId", quotedPost: "", textQuoted: "", comment: "TestKommentar", userId: "auto", postTime: new Date()})
-      Forums.insert({ active:  })
 
       // Methoden um zum erstellen eines Forums
       // const idforum = Meteor.call("createForum", "Forum1", "Testforum", "TestModeratorId")
@@ -28,7 +19,7 @@ Meteor.startup(() => {
       // const idpost = Meteor.call("addPost", "T9aLNqvAjfL87MoGW", "", "", "Kommentar........")
     }
   // Default users
-  if (Meteor.users.find().count() === 0) {
+if (Meteor.users.find().count() === 0) {
     _.each(
       [
         {
