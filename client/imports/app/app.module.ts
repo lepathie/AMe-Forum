@@ -7,6 +7,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component'
 import { TopicsComponent } from './topics/topics.component'
 import { AccountsModule } from 'angular2-meteor-accounts-ui'
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+import { HttpClientModule, HttpClient } from '@angular/common/http'
+import { HeaderComponent } from './header/header.component'
+
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json')
+  }
 
 @NgModule({
     imports: [
@@ -34,13 +42,24 @@ import { AccountsModule } from 'angular2-meteor-accounts-ui'
                 component: PageNotFoundComponent
             }
         ]),
-        AccountsModule
+        AccountsModule,
+        HttpClientModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'en',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        })
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         TopicsComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+        HeaderComponent
+
     ],
     bootstrap: [
         AppComponent
