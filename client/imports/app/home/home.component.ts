@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core'
 
 @Component({
-    selector: 'forum-page',
-    templateUrl: './forum.html',
-    styleUrls: [ './forum.scss' ],
+    selector: 'home',
+    templateUrl: './home.html',
+    styleUrls: [ './home.scss' ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ForumComponent { }
+export class HomeComponent { }
