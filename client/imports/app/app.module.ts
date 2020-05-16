@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-import { ForumComponent } from './forum/forum.component'
+import { HomeComponent } from './home/home.component'
 import { TopicsComponent } from './topics/topics.component'
 import { AccountsModule } from 'angular2-meteor-accounts-ui'
 
@@ -21,7 +21,7 @@ import { AccountsModule } from 'angular2-meteor-accounts-ui'
             },
             {
                 path: 'home',
-                component: ForumComponent
+                component: HomeComponent
             },
             // Topics
             {
@@ -38,7 +38,7 @@ import { AccountsModule } from 'angular2-meteor-accounts-ui'
     ],
     declarations: [
         AppComponent,
-        ForumComponent,
+        HomeComponent,
         TopicsComponent,
         PageNotFoundComponent
     ],
