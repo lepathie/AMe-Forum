@@ -5,8 +5,8 @@
     "start:prod": "AOT=1 ROLLUP=1 meteor --production",
     "test": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs",
     "test:ci": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs --once",
-    "lint": "tslint -p tsconfig.json",
-    "lint-fix": "tslint --fix -p tsconfig.json"
+    "lint": "npx tslint -p tsconfig.json",
+    "lint-fix": "npx tslint --fix -p tsconfig.json"
   },
   "dependencies": {
     "@angular/animations": "^9.1.7",
@@ -41,11 +41,11 @@
     "@types/mocha": "7.0.2",
     "@types/sinon": "9.0.0",
     "chai": "4.2.0",
-    "codelyzer": "^5.2.2",
+    "codelyzer": "5.2.2",
     "mocha": "7.1.2",
     "puppeteer": "3.0.2",
     "sinon": "9.0.2",
-    "tslint": "^6.1.2",
+    "tslint": "6.1.2",
     "typescript": "3.8.3"
   }
 }
