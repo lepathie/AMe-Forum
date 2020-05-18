@@ -12,6 +12,7 @@ A forum engine built on top of **_Angular_** and **_Meteor_**.
   - [Before you start](#before-you-start)
   - [NPM Scripts](#npm-scripts)
   - [Project Contents](#project-contents)
+    - [Conceptional design](#conceptional-design)
     - [Defaults](#defaults)
       - [Default users](#default-users)
       - [Default forums](#default-forums)
@@ -67,6 +68,10 @@ This package contains:
 - SASS, LESS, CSS support (Also support styles encapsulation for Angular 2)
 - Testing framework with Mocha and Chai
 - Meteor-RxJS support and usage
+
+### Conceptional design
+
+The conceptional design can be found [here](https://www.figma.com/file/m3eWG6zgkKdGblxd9TnNGy/AMe-Forum?node-id=0%3A1 "Conceptional design of AMe-Forum on Figma"). All future components should follow the design language specified there.
 
 ### Defaults
 
