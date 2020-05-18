@@ -4,8 +4,8 @@ name: Linter
 on: [push]
 
 jobs:
-  linter:
-    name: Run Linter
+  runner:
+    name: Runner
 
     # Runs on latest ubuntu version
     runs-on: ubuntu-latest
