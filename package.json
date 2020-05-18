@@ -3,6 +3,9 @@
   "scripts": {
     "start": "meteor run",
     "start:prod": "AOT=1 ROLLUP=1 meteor --production",
+    "build": "meteor build",
+    "clear": "meteor reset",
+    "meteor:update": "meteor update",
     "test": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs",
     "test:ci": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs --once",
     "lint": "npx tslint -p tsconfig.json",

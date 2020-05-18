@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 900px) {
+    flex-direction: row;
+
+    > {
+      // This adds spacing between the elements (empty ones get ignored)
+      *:not(:empty) ~ *:not(:empty) {
+        border-left: 24px solid transparent;
+        border-top: initial !important;
+      }
+    }
+  }
+
+  > {
+    * {
+      flex: 1;
+      overflow-wrap: break-word;
+      background-clip: padding-box;
+    }
+
+    *:empty {
+      display: none;
+    }
+
+    // This adds spacing between the elements (empty ones get ignored)
+    *:not(:empty) ~ *:not(:empty) {
+      border-top: 12px solid transparent;
+    }
+
+    aside {
+      flex: 0.5;
+    }
+
+    aside,
+    main {
+      display: flex;
+      flex-direction: column;
+
+      // Smaller spacing inside
+      *:not(:empty) ~ *:not(:empty) {
+        border-top: 10px solid transparent;
+      }
+    }
+  }
+}

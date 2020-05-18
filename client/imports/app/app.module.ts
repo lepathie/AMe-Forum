@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
-import { ForumComponent } from './forum/forum.component'
+import { HomeComponent } from './home/home.component'
 import { AccountsModule } from 'angular2-meteor-accounts-ui'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
+import { HeaderComponent } from './header/header.component'
+import { FooterComponent } from './footer/footer.component'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -27,7 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
             },
             {
                 path: 'home',
-                component: ForumComponent
+                component: HomeComponent
             },
             // 404 Page
             {
@@ -48,8 +50,10 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     declarations: [
         AppComponent,
-        ForumComponent,
         PageNotFoundComponent
+        FooterComponent
+        HeaderComponent,
+        HomeComponent,
     ],
     bootstrap: [
         AppComponent
