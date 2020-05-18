@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { HomeComponent } from './home/home.component'
-import { TopicsComponent } from './topics/topics.component'
 import { AccountsModule } from 'angular2-meteor-accounts-ui'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
@@ -32,11 +31,6 @@ export function createTranslateLoader(http: HttpClient) {
                 path: 'home',
                 component: HomeComponent
             },
-            // Topics
-            {
-                path: 'topics',
-                component: TopicsComponent
-            },
             // 404 Page
             {
                 path: '**',
@@ -56,12 +50,10 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
-        TopicsComponent,
         PageNotFoundComponent,
+        FooterComponent,
         HeaderComponent,
-        FooterComponent
-
+        HomeComponent
     ],
     bootstrap: [
         AppComponent
