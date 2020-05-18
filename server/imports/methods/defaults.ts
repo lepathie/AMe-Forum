@@ -3,9 +3,10 @@ import { Threads } from 'imports/collections/threads'
 import { Posts } from "imports/collections/posts"
 import _ from 'underscore'
 import { identifierModuleUrl } from '@angular/compiler'
-
-// This file contains the defaults for this AMe-Forum installation
-// Feel free to customize for your needs.
+/**
+ *  @file This file contains the defaults for this AMe-Forum installation
+ *  Feel free to customize for your needs.
+ */
 if (Forums.find().cursor.count() === 0) {
   Forums.insert({ active: true, name: "Help", description: "Contains tutorials on usage of the forums."})
   Forums.insert({ active: true, name: "General", description: "Introduction for new users and general rules."})
