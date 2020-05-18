@@ -25,7 +25,6 @@
     "angular2-meteor": "^0.8.0",
     "angular2-meteor-accounts-ui": "^1.0.0",
     "bcrypt": "^4.0.1",
-    "codelyzer": "^5.2.2",
     "core-js": "2.5.7",
     "lint": "^0.7.0",
     "meteor-node-stubs": "1.0.0",
@@ -41,11 +40,12 @@
     "@types/meteor-roles": "^1.2.32",
     "@types/mocha": "7.0.2",
     "@types/sinon": "9.0.0",
-    "tslint": "^6.1.2",
     "chai": "4.2.0",
+    "codelyzer": "^5.2.2",
     "mocha": "7.1.2",
     "puppeteer": "3.0.2",
     "sinon": "9.0.2",
+    "tslint": "^6.1.2",
     "typescript": "3.8.3"
   }
 }
