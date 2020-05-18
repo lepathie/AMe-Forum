@@ -1,0 +1,16 @@
+@import "../../styles/colors";
+
+:host {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: color(background, dark);
+  height: 178px;
+  width: 100%;
+}
+
+#logo {
+  width: 307px;
+  height: 57px;
+}

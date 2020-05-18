@@ -1,0 +1,9 @@
+@import "../../styles/colors";
+
+:host {
+  flex-shrink: 0;
+  display: block;
+  background-color: color(background, dark);
+  height: 100px;
+  width: 100%;
+}
