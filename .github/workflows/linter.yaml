@@ -6,15 +6,16 @@ on: push
 jobs:
   linter:
     name: Run Linter
-    # Machine environment:
-    # https://help.github.com/en/articles/software-in-virtual-environments-for-github-actions#ubuntu-1804-lts
-    # We specify the Node.js version manually below, and use versioned Chrome from Puppeteer.
-    runs-on: ubuntu-18.04
 
+    # Runs on latest ubuntu version
+    runs-on: ubuntu-latest
     steps:
-      - name: Use Latest Meteor
+      - # Set up meteor
+        name: Use Latest Meteor
         run: curl https://install.meteor.com/ | sh
-      - name: Install dependencies
+      - # Install dependencies
+        name: Install dependencies
         run: meteor npm install
-      - name: Lint
+      - # Run our linting script without fixing issues
+        name: Lint
         run: meteor npm run lint
