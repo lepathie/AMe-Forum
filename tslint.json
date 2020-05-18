@@ -70,6 +70,7 @@
     "arrow-return-shorthand": true,
     "static-this": true,
     "prefer-conditional-expression": [true, "check-else-if"],
-    "experimentalDecorators": false
+    "experimentalDecorators": false,
+    "eofline": true
   }
 }
