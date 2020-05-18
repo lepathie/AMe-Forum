@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - # Set up meteor
-        name: Use Latest Meteor
+        name: Install Latest Meteor
         run: curl https://install.meteor.com/ | sh
       - # Install dependencies
         name: Install dependencies
