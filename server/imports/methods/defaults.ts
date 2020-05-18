@@ -7,8 +7,8 @@ import { identifierModuleUrl } from '@angular/compiler'
 // This file contains the defaults for this AMe-Forum installation
 // Feel free to customize for your needs.
 if (Forums.find().cursor.count() === 0) {
-  Forums.insert({ active: true, name: "Help", description: "Tutorials for this platform"})
-  Forums.insert({ active: true, name: "General", description: "A general forum"})
+  Forums.insert({ active: true, name: "Help", description: "Contains tutorials on usage of the forums."})
+  Forums.insert({ active: true, name: "General", description: "Introduction for new users and general rules."})
   // Threads.insert({ _id: "TestId", forumId: "TestId" , name: "testThread", viewCounter: 0, followCounter: 0, date: new Date(), creator: "auto"})
   // Posts.insert({ _id: "TestId", threadId: "TestId", quotedPost: "", textQuoted: "", comment: "TestKommentar", userId: "auto", postTime: new Date()})
 
