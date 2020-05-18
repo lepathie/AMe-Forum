@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: 12.16.1
       - name: Install dependencies
-        working-directory: ./
+        working-directory: .
         run: npm install
       - name: Lint
-        working-directory: ./
+        working-directory: .
         run: npm run lint
