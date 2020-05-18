@@ -1,7 +1,7 @@
 name: Linter
 
 # Trigger on push
-on: push
+on: [push]
 
 jobs:
   linter:
@@ -9,6 +9,7 @@ jobs:
 
     # Runs on latest ubuntu version
     runs-on: ubuntu-latest
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v1
       - # Set up meteor
