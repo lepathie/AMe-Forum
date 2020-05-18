@@ -18,21 +18,6 @@ jobs:
       - # Install dependencies
         name: Install dependencies
         run: meteor npm ci
-      - # Lint typescript-files and annotate issues for imports
-        name: TSLint Checks for Imports
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: "imports/**/*.ts"
-      - # Lint typescript-files and annotate issues for server
-        name: TSLint Checks for Server
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: "server/**/*.ts"
-      - # Lint typescript-files and annotate issues for client
-        name: TSLint Checks for Client
-        uses: mooyoul/tslint-actions@v1.1.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pattern: "client/**/*.ts"
+      - # Run our linting script without fixing issues
+        name: Lint
+        run: meteor npm run lint
