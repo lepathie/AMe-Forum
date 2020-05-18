@@ -69,6 +69,7 @@
     "trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
     "arrow-return-shorthand": true,
     "static-this": true,
-    "prefer-conditional-expression": [true, "check-else-if"]
+    "prefer-conditional-expression": [true, "check-else-if"],
+    "experimentalDecorators": false
   }
 }
