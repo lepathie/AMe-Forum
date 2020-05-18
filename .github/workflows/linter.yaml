@@ -13,13 +13,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 12.16.1
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.16.1
+      - name: Use Latest Meteor
+        run: curl https://install.meteor.com/ | sh
       - name: Install dependencies
-        working-directory: .
-        run: npm install
+        run: meteor npm install
       - name: Lint
-        working-directory: .
-        run: npm run lint
+        run: meteor npm run lint
