@@ -21,9 +21,4 @@ export interface Forum {
      * Description: Description of this forum
      */
     description: string
-
-    /**
-     * Mods: IDs of the moderators of this specific Forum
-     */
-    mods: [string]
 }

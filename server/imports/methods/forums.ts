@@ -10,7 +10,7 @@ Meteor.methods({
      * @param _description Description of the new forum
      * @param _mod ID of the Administrator who created the forum
      */
-    createForum(_forumName: string, _description: string, _mod: string) {
+    createForum(_forumName: string, _description: string) {
 
     const user = Meteor.user()
     if (user === null) {
@@ -23,15 +23,11 @@ Meteor.methods({
     if (_description === "") {
       throw new Meteor.Error("Description is required!")
     }
-    if (_mod === "") {
-      throw new Meteor.Error("Moderator is required!")
-    }
 
     return Forums.insert({
       active: true,
       name: _forumName,
-      description: _description,
-      mods: [_mod]
+      description: _description
     })
     // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1})
   }
