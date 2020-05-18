@@ -16,7 +16,9 @@ jobs:
         run: curl https://install.meteor.com/ | sh
       - # Install dependencies
         name: Install dependencies
-        run: meteor npm install
-      - # Run our linting script without fixing issues
-        name: Lint
-        run: meteor npm run lint
+        run: meteor npm ci
+      - # Lint typescript-files and annotate issues
+        uses: mooyoul/tslint-actions@v1.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: "*.ts"
