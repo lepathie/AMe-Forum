@@ -60,4 +60,3 @@ export function createTranslateLoader(http: HttpClient) {
     ]
 })
 export class AppModule { }
-
