@@ -10,6 +10,7 @@ jobs:
     # Runs on latest ubuntu version
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - # Set up meteor
         name: Use Latest Meteor
         run: curl https://install.meteor.com/ | sh
