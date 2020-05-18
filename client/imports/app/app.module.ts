@@ -50,10 +50,10 @@ export function createTranslateLoader(http: HttpClient) {
     ],
     declarations: [
         AppComponent,
-        PageNotFoundComponent
-        FooterComponent
+        PageNotFoundComponent,
+        FooterComponent,
         HeaderComponent,
-        HomeComponent,
+        HomeComponent
     ],
     bootstrap: [
         AppComponent
