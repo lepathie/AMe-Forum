@@ -6,8 +6,8 @@
     "build": "meteor build",
     "clear": "meteor reset",
     "meteor:update": "meteor update",
-    "test": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs",
-    "test:ci": "TEST_BROWSER_DRIVER=puppeteer meteor test --driver-package=ardatan:mocha --raw-logs --once",
+    "test": "TEST_BROWSER_DRIVER=chrome TEST_CHROME_ARGS='--disable-dev-shm-usage' meteor test --driver-package=meteortesting:mocha --raw-logs",
+    "test:ci": "TEST_BROWSER_DRIVER=chrome TEST_CHROME_ARGS='--disable-dev-shm-usage' meteor test --driver-package=meteortesting:mocha --raw-logs --once",
     "lint": "npx tslint -p tsconfig.json",
     "lint-fix": "npx tslint --fix -p tsconfig.json"
   },
@@ -44,11 +44,13 @@
     "@types/mocha": "7.0.2",
     "@types/sinon": "9.0.0",
     "chai": "4.2.0",
+    "chromedriver": "^81.0.0",
     "codelyzer": "5.2.2",
     "mocha": "7.1.2",
-    "puppeteer": "3.1.0",
+    "selenium-webdriver": "^3.6.0",
     "sinon": "9.0.2",
     "tslint": "6.1.2",
+    "tslint-no-unused-expression-chai": "^0.1.4",
     "typescript": "3.8.3"
   }
 }

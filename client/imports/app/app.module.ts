@@ -11,6 +11,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component'
+import { HomeModule } from './home/home.module'
+import { SharedModule } from './shared/shared.module'
+import { HeaderModule } from './header/header.module'
+import { FooterModule } from './footer/footer.module'
+import { PageNotFoundModule } from './page-not-found/page-not-found.module'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -20,6 +25,7 @@ export function createTranslateLoader(http: HttpClient) {
     imports: [
         BrowserModule,
         FormsModule,
+        SharedModule,
         RouterModule.forRoot([
             // Home
             {
@@ -38,7 +44,6 @@ export function createTranslateLoader(http: HttpClient) {
             }
         ]),
         AccountsModule,
-        HttpClientModule,
         TranslateModule.forRoot({
             defaultLanguage: 'en',
             loader: {
@@ -46,14 +51,14 @@ export function createTranslateLoader(http: HttpClient) {
                 useFactory: (createTranslateLoader),
                 deps: [HttpClient]
             }
-        })
+        }),
+        HomeModule,
+        HeaderModule,
+        FooterModule,
+        PageNotFoundModule
     ],
     declarations: [
-        AppComponent,
-        PageNotFoundComponent,
-        FooterComponent,
-        HeaderComponent,
-        HomeComponent
+        AppComponent
     ],
     bootstrap: [
         AppComponent
