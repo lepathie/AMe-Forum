@@ -4,7 +4,7 @@ APP_DOMAIN=localhost
 APP_PORT=3000
 SETTINGS_PATH=.meteor/settings.json
 MONGO_URL=localhost
-MONGO_PORT=3001
+MONGO_PORT=27017
 MONGO_DB=meteor
 
 echo "=> Removing /tmp/${APP_NAME}"
