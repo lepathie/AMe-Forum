@@ -61,4 +61,4 @@ docker rmi -f ${APP_NAME}
 docker build -t ${APP_NAME} .
 
 echo "=> Starting ${APP_NAME} container…"
-docker run -d — name ${APP_NAME} -p ${APP_PORT}:3000 ${APP_NAME}
+docker run -d --name ${APP_NAME} -p ${APP_PORT}:3000 ${APP_NAME}
