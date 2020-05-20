@@ -1,0 +1,31 @@
+// Function for easier usage of global color palette
+@function color($color, $tone) {
+  @if map-has-key($palette, $color) {
+    $color: map-get($palette, $color);
+
+    @if map-has-key($color, $tone) {
+      $tone: map-get($color, $tone);
+      @return $tone;
+    }
+
+    @warn "unknown tone `#{$tone}` in color";
+    @return null;
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+}
+
+// Global color palette
+$palette: (
+  background: (
+    base: #393e46,
+    dark: #222831,
+  ),
+  foreground: (
+    base: #eeeeee,
+  ),
+  accent: (
+    base: #ff5722,
+  ),
+);
