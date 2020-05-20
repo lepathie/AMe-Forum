@@ -1,6 +1,11 @@
-<aside>
-  <!-- AccountComponent goes here -->
-</aside>
+<aside></aside>
 <main>
-  <!-- ForumsComponent goes here -->
+  <article>
+    <header
+      [innerHTML]="'blocks.underDevelopmentNotice.heading' | translate"
+    ></header>
+    <main
+      [innerHTML]="'blocks.underDevelopmentNotice.content' | translate"
+    ></main>
+  </article>
 </main>
