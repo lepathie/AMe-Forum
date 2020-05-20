@@ -9,7 +9,8 @@
     "test": "TEST_BROWSER_DRIVER=chrome TEST_CHROME_ARGS='--disable-dev-shm-usage' meteor test --driver-package=meteortesting:mocha --raw-logs",
     "test:ci": "TEST_BROWSER_DRIVER=chrome TEST_CHROME_ARGS='--disable-dev-shm-usage' meteor test --driver-package=meteortesting:mocha --raw-logs --once",
     "lint": "npx tslint -p tsconfig.json",
-    "lint-fix": "npx tslint --fix -p tsconfig.json"
+    "lint-fix": "npx tslint --fix -p tsconfig.json",
+    "dockerize": "bash dockerize.sh"
   },
   "dependencies": {
     "@angular/animations": "^9.1.7",
