@@ -61,7 +61,6 @@
     ],
     "indent": [true, "spaces", 4],
     "jsdoc-format": [true, "check-multiline-start"],
-    "linebreak-style": [true, "LF"],
     "no-consecutive-blank-lines": true,
     "no-irregular-whitespace": true,
     "no-trailing-whitespace": true,
