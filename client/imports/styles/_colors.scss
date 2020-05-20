@@ -1,7 +1,5 @@
 // Function for easier usage of global color palette
 @function color($color, $tone) {
-  @warn map-get($palette,$color);
-
   @if map-has-key($palette, $color) {
     $color: map-get($palette, $color);
 
