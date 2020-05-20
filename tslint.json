@@ -1,6 +1,6 @@
 {
   "extends": "tslint:recommended",
-  "rulesDirectory": ["node_modules/codelyzer"],
+  "rulesDirectory": ["codelyzer", "tslint-no-unused-expression-chai"],
   "rules": {
     "no-unnecessary-class": false,
     "component-class-suffix": true,
@@ -71,6 +71,8 @@
     "static-this": true,
     "prefer-conditional-expression": [true, "check-else-if"],
     "experimentalDecorators": false,
-    "eofline": true
+    "eofline": true,
+    "no-unused-expression": false,
+    "no-unused-expression-chai": true
   }
 }

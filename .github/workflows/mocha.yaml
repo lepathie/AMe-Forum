@@ -1,0 +1,23 @@
+name: Mocha
+
+# Trigger on push
+on: [push]
+
+jobs:
+  runner:
+    name: Runner
+
+    # Runs on latest ubuntu version
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v1
+      - # Set up meteor
+        name: Install Latest Meteor
+        run: curl https://install.meteor.com/ | sh
+      - # Install dependencies
+        name: Install dependencies
+        run: meteor npm ci
+      - # Run our testing script
+        name: Mocha
+        run: meteor npm run test:ci
