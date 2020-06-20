@@ -1,7 +1,8 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { Forums } from 'imports/collections/forums'
 import { Message } from '@angular/compiler/src/i18n/i18n_ast'
+import { Router } from '@angular/router'
+import { HomeComponent } from '../home/home.component'
 
 @Component({
     selector: 'new-forum-component',
@@ -22,10 +23,10 @@ ngOnInit() {
 }
 
 onSubmit() {
+    // fehlender Berechtigungscheck
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.beschreibung !== '') {
         const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
-        // Moderator setztn mit Meteor.user_id und forumId
         window.location.href = '/home'
     }
     else {

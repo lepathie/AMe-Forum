@@ -12,6 +12,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { MatChipsModule } from '@angular/material/chips'
 import { BrowserModule } from '@angular/platform-browser'
 import { FrameModule } from '../frame/frame.module'
+import { Routes, RouterModule } from '@angular/router'
 
 @NgModule({
     declarations: [
@@ -29,7 +30,8 @@ import { FrameModule } from '../frame/frame.module'
         MatButtonModule,
         MatCheckboxModule,
         MatChipsModule,
-        FrameModule
+        FrameModule,
+        RouterModule
 
     ],
     exports: [
