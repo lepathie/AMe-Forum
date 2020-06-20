@@ -7,13 +7,16 @@
   },
   "widgets": {
     "forums": {
-      "title": "Forums",
+      "title": "Forums", 
       "table": {
         "header": {
           "name": "Name",
           "description": "Description"
         }
       }
+    },
+    "new-forum":{
+      "title": "Create Forum"
     },
     "loginRegistration":{
       "title": "Login / Registration"
