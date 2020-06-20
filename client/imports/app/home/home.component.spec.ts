@@ -10,11 +10,12 @@ import { MockComponent } from 'ng-mocks'
 import { HeaderComponent } from '../header/header.component'
 import { FooterComponent } from '../footer/footer.component'
 import { SharedModule } from '../shared/shared.module'
+import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(HeaderComponent), MockComponent(FooterComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(HeaderComponent), MockComponent(FooterComponent), MockComponent(LoginRegistrationComponent)],
             imports: [
                 SharedModule,
                 TranslateModule.forRoot({ })
@@ -54,6 +55,14 @@ describe(`HomeComponent`, () => {
         const forumsWidget = fixture.debugElement.query(By.css('forums-widget'))
 
         expect(forumsWidget).to.be.ok
+    }))
+
+    it(`should contain an '<login-registration-component>'` , async(() => {
+        const fixture = TestBed.createComponent(HomeComponent)
+        fixture.detectChanges()
+        const loginRegistration = fixture.debugElement.query(By.css('login-registration-component'))
+
+        expect(loginRegistration).to.be.ok
     }))
 
 })
