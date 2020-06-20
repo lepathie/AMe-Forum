@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { Observable, Subscription } from 'rxjs'
+import { Observable } from 'rxjs'
 import { Forum } from 'imports/models/forum'
 import { Forums } from 'imports/collections/forums'
 import { MeteorObservable } from 'meteor-rxjs'
