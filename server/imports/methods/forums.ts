@@ -12,11 +12,11 @@ Meteor.methods({
      */
     createForum(_forumName: string, _description: string) {
 
-    const user = Meteor.user()
-    if (user === null) {
-       throw new Meteor.Error("You are not logged in!")
+    // const user = Meteor.user()
+    // if (user === null) {
+    //   throw new Meteor.Error("You are not logged in!")
       // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
-    }
+    // }
     if (_forumName === "") {
       throw new Meteor.Error("ForumName is required!")
     }
@@ -29,6 +29,6 @@ Meteor.methods({
       name: _forumName,
       description: _description
     })
-    // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1})
+    // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1}) => liefert nur ID zurück
   }
 })

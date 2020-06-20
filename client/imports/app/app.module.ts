@@ -16,6 +16,8 @@ import { SharedModule } from './shared/shared.module'
 import { HeaderModule } from './header/header.module'
 import { FooterModule } from './footer/footer.module'
 import { PageNotFoundModule } from './page-not-found/page-not-found.module'
+import { NewForumModule } from './new-forum/new-forum.module'
+import { NewForumComponent } from './new-forum/new-forum.component'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -37,6 +39,10 @@ export function createTranslateLoader(http: HttpClient) {
                 path: 'home',
                 component: HomeComponent
             },
+            {
+                path: 'new-forum',
+                component: NewForumComponent
+            },
             // 404 Page
             {
                 path: '**',
@@ -55,7 +61,8 @@ export function createTranslateLoader(http: HttpClient) {
         HomeModule,
         HeaderModule,
         FooterModule,
-        PageNotFoundModule
+        PageNotFoundModule,
+        NewForumModule
     ],
     declarations: [
         AppComponent

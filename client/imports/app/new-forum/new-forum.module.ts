@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core"
-import { HomeComponent } from './home.component'
+import { NewForumComponent } from './new-forum.component'
 import { FooterModule } from '../footer/footer.module'
 import { HeaderModule } from '../header/header.module'
 import { SharedModule } from '../shared/shared.module'
@@ -15,7 +15,7 @@ import { BrowserModule } from '@angular/platform-browser'
 
 @NgModule({
     declarations: [
-        HomeComponent
+        NewForumComponent
     ],
     imports: [
         SharedModule,
@@ -32,7 +32,7 @@ import { BrowserModule } from '@angular/platform-browser'
 
     ],
     exports: [
-        HomeComponent
+        NewForumComponent
     ]
 })
-export class HomeModule { }
+export class NewForumModule { }

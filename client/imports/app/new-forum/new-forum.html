@@ -1,0 +1,16 @@
+<aside>
+  <!-- AccountComponent goes here -->
+</aside>
+<main>
+  <!-- ForumsComponent goes here -->
+<form [formGroup]="myForm">
+  <h2>Neues Forum anlegen:</h2>
+  <br>
+  <input placeholder="Titel" formControlName="titel">
+  <br><br>
+  <textarea  placeholder="Beschreibung" formControlName="beschreibung"></textarea>
+
+  <br><br>
+  <button (click)="onSubmit()">Eingabe bestätigen</button>
+</form>
+</main>
