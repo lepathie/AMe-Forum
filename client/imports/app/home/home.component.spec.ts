@@ -4,17 +4,19 @@ import { TestBed, getTestBed, async } from '@angular/core/testing'
 import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
-import { HomeModule } from './home.module'
 import { HomeComponent } from './home.component'
 import { ForumsWidgetComponent } from '../forums-widget/forums-widget.component'
 import { MockComponent } from 'ng-mocks'
+import { HeaderComponent } from '../header/header.component'
+import { FooterComponent } from '../footer/footer.component'
+import { SharedModule } from '../shared/shared.module'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [MockComponent(ForumsWidgetComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(HeaderComponent), MockComponent(FooterComponent)],
             imports: [
-                HomeModule,
+                SharedModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css
