@@ -14,7 +14,7 @@ export class NewForumComponent implements OnInit{
 
 myForm: FormGroup
 
-constructor(private fb: FormBuilder) { }
+constructor(private fb: FormBuilder, private router: Router) { }
 ngOnInit() {
     this.myForm = this.fb.group({
         titel: '',
@@ -27,7 +27,7 @@ onSubmit() {
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.beschreibung !== '') {
         const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
-        window.location.href = '/home'
+        this.router.navigateByUrl('/home')
     }
     else {
         alert('Bitte alle Felder ausfüllen')
