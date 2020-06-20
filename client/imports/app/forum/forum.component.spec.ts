@@ -6,17 +6,15 @@ import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { ForumComponent } from './forum.component'
-import { SharedModule } from '../shared/shared.module'
-import { MatDividerModule } from '@angular/material/divider'
+import { ForumModule } from './forum.module'
 
 describe(`ForumComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ForumComponent],
+            declarations: [],
             imports: [
-                SharedModule,
-                MatDividerModule,
                 RouterTestingModule,
+                ForumModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css

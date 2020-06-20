@@ -1,6 +1,6 @@
-import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core'
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef, OnDestroy } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
-import { Observable } from 'rxjs'
+import { Observable, Subscription } from 'rxjs'
 import { Forum } from 'imports/models/forum'
 import { Forums } from 'imports/collections/forums'
 import { MeteorObservable } from 'meteor-rxjs'
@@ -11,8 +11,9 @@ import { MeteorObservable } from 'meteor-rxjs'
     styleUrls: [ './forum.scss' ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ForumComponent implements OnInit {
+export class ForumComponent implements OnInit, OnDestroy {
     forums: Observable<Forum[]>
+    forumsListSubscription: Subscription
     forum: Forum
 
     constructor(
@@ -24,7 +25,7 @@ export class ForumComponent implements OnInit {
         this.route.params.subscribe(params => {
             const id = params.id
 
-            MeteorObservable.subscribe('forums').subscribe(() => {
+            this.forumsListSubscription = MeteorObservable.subscribe('forums').subscribe(() => {
                 this.forums = Forums.find({ _id: id }, { sort: { name: 1}})
                 this.forums.subscribe(forums => {
                     if (forums.length === 1) {
@@ -42,5 +43,11 @@ export class ForumComponent implements OnInit {
                 this.changeDetectorRef.markForCheck()
             })*/
         })
+    }
+
+    ngOnDestroy() {
+        if (this.forumsListSubscription) {
+            this.forumsListSubscription.unsubscribe()
+        }
     }
 }
