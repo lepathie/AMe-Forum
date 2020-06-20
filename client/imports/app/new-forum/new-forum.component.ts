@@ -17,15 +17,15 @@ myForm: FormGroup
 constructor(private fb: FormBuilder, private router: Router) { }
 ngOnInit() {
     this.myForm = this.fb.group({
-        titel: '',
-        beschreibung: ''
+        title: '',
+        description: ''
     })
 }
 
 onSubmit() {
     // fehlender Berechtigungscheck
     const formValue = this.myForm.value
-    if (formValue.title !== '' && formValue.beschreibung !== '') {
+    if (formValue.title !== '' && formValue.description !== '') {
         const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
         this.router.navigateByUrl('/home')
     }

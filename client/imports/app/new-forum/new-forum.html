@@ -1,13 +1,13 @@
 <frame-component title="{{ 'widgets.new-forum.title' | translate }}">
     <form [formGroup]="myForm">
       <mat-form-field>
-        <mat-label>Title</mat-label>
-        <input matInput placeholder="Ex. title" formControlName="titel">
+        <mat-label>{{ 'widgets.new-forum.form.inputs.title.label' | translate }}</mat-label>
+        <input matInput placeholder="{{ 'widgets.new-forum.form.inputs.title.placeholder' | translate }}" formControlName="title">
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Description</mat-label>
-        <textarea matInput placeholder="Ex. description" formControlName="beschreibung"></textarea>
+        <mat-label>{{ 'widgets.new-forum.form.inputs.description.label' | translate }}</mat-label>
+        <textarea matInput placeholder="{{ 'widgets.new-forum.form.inputs.description.placeholder' | translate }}" formControlName="description"></textarea>
       </mat-form-field>
-      <button mat-flat-button color="accent" (click)="onSubmit()">Submit</button>
+      <button mat-flat-button color="accent" (click)="onSubmit()">{{ 'widgets.new-forum.form.inputs.submit.name' | translate }}</button>
     </form>
 </frame-component>
