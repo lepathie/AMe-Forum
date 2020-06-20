@@ -13,7 +13,7 @@ import { LoginRegistrationComponent } from '../login-registration/login-registra
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent)],
             imports: [
                 SharedModule,
                 TranslateModule.forRoot({ })
