@@ -6,7 +6,7 @@ Meteor.publish('forums', () => {
     return Forums.find()
 })
 
-Meteor.publish('topic', (id) => {
+Meteor.publish('forum', (id) => {
     check(id, String)
     return Forums.find({ _id: id})
 })

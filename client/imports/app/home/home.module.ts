@@ -3,6 +3,7 @@ import { HomeComponent } from './home.component'
 import { FooterModule } from '../footer/footer.module'
 import { HeaderModule } from '../header/header.module'
 import { SharedModule } from '../shared/shared.module'
+import { ForumsWidgetModule } from '../forums-widget/forums-widget.module'
 
 @NgModule({
     declarations: [
@@ -11,7 +12,8 @@ import { SharedModule } from '../shared/shared.module'
     imports: [
         SharedModule,
         HeaderModule,
-        FooterModule
+        FooterModule,
+        ForumsWidgetModule
     ],
     exports: [
         HomeComponent
