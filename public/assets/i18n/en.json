@@ -15,8 +15,28 @@
         }
       }
     },
+    "new-forum":{
+      "title": "Create Forum",
+      "form": {
+        "inputs": {
+          "title": {
+            "label": "Title",
+            "placeholder": "A forum"
+          },
+          "description": {
+            "label": "Description",
+            "placeholder": "This forum contains..."
+          },
+          "submit": {
+            "label": "Create"
+          }
+
+        }
+      }
+    },
     "loginRegistration":{
       "title": "Login / Registration"
     }
+    
   }
 }
