@@ -18,7 +18,7 @@ import { Directive } from '@angular/core'
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, ForumsWidgetDirective],
+            declarations: [ForumsWidgetDirective],
             imports: [
                 HomeModule,
                 TranslateModule.forRoot({ })
