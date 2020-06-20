@@ -1,12 +1,21 @@
 import '../../polyfills.spec'
 
-import { RouterTestingModule } from '@angular/router/testing'
+import { RouterTestingModule, SpyNgModuleFactoryLoader } from '@angular/router/testing'
 import { TestBed, getTestBed, async } from '@angular/core/testing'
+import { of } from 'rxjs'
 import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { ForumComponent } from './forum.component'
 import { ForumModule } from './forum.module'
+import { Forum } from 'imports/models/forum'
+import { spy, spyCall } from 'sinon'
+
+class MockForumComponent extends ForumComponent {
+    getForum() {
+        this.forum = { active: true, name: "Help", description: "Contains tutorials on usage of the forums." }
+    }
+}
 
 describe(`ForumComponent`, () => {
     beforeEach(async(() => {
@@ -25,13 +34,13 @@ describe(`ForumComponent`, () => {
     })
 
     it('should create the component', async(() => {
-        const fixture = TestBed.createComponent(ForumComponent)
+        const fixture = TestBed.createComponent(MockForumComponent)
         const forum = fixture.debugElement.componentInstance
         expect(forum).to.be.ok
     }))
 
     it(`should contain an '<h1>'` , async(() => {
-        const fixture = TestBed.createComponent(ForumComponent)
+        const fixture = TestBed.createComponent(MockForumComponent)
         fixture.detectChanges()
         const heading = fixture.debugElement.query(By.css('h1'))
 
@@ -39,7 +48,7 @@ describe(`ForumComponent`, () => {
     }))
 
     it(`should contain an '<header>'` , async(() => {
-        const fixture = TestBed.createComponent(ForumComponent)
+        const fixture = TestBed.createComponent(MockForumComponent)
         fixture.detectChanges()
         const header = fixture.debugElement.query(By.css('header'))
 
@@ -47,7 +56,7 @@ describe(`ForumComponent`, () => {
     }))
 
     it(`should contain an '<mat-divider>'` , async(() => {
-        const fixture = TestBed.createComponent(ForumComponent)
+        const fixture = TestBed.createComponent(MockForumComponent)
         fixture.detectChanges()
         const divider = fixture.debugElement.query(By.css('mat-divider'))
 
