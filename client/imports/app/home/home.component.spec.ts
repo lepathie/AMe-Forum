@@ -6,10 +6,13 @@ import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { HomeModule } from './home.module'
 import { HomeComponent } from './home.component'
+import { ForumsWidgetComponent } from '../forums-widget/forums-widget.component'
+import { MockComponent } from 'ng-mocks'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
+            declarations: [MockComponent(ForumsWidgetComponent)],
             imports: [
                 HomeModule,
                 TranslateModule.forRoot({ })
