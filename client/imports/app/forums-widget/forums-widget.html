@@ -1,0 +1,16 @@
+<frame-component title="{{ 'widgets.forums.title' | translate }}">
+  <table>
+    <thead>
+      <tr>
+        <th>{{ 'widgets.forums.table.header.name' | translate }}</th>
+        <th>{{ 'widgets.forums.table.header.description' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forum of forums | async; trackBy: identify">
+        <td>{{ forum.name }}</td>
+        <td>{{ forum.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</frame-component>

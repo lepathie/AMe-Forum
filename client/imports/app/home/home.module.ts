@@ -3,8 +3,7 @@ import { HomeComponent } from './home.component'
 import { FooterModule } from '../footer/footer.module'
 import { HeaderModule } from '../header/header.module'
 import { SharedModule } from '../shared/shared.module'
-import { ReactiveFormsModule } from '@angular/forms'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ForumsWidgetModule } from '../forums-widget/forums-widget.module'
 
 import { MatInputModule } from '@angular/material/input'
 import { MatSelectModule } from '@angular/material/select'
@@ -21,15 +20,7 @@ import { BrowserModule } from '@angular/platform-browser'
         SharedModule,
         HeaderModule,
         FooterModule,
-        BrowserModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatInputModule,
-        MatSelectModule,
-        MatButtonModule,
-        MatCheckboxModule,
-        MatChipsModule
-
+        ForumsWidgetModule
     ],
     exports: [
         HomeComponent
