@@ -1,0 +1,22 @@
+<frame-component title="{{ 'widgets.new-forum.title' | translate }}">
+
+<form [formGroup]="myForm">
+  
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput placeholder="Ex. title" formControlName="titel">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Ex. description" formControlName="beschreibung"></textarea>
+  </mat-form-field>
+
+  <button mat-flat-button color="accent" (click)="onSubmit()">Submit</button>
+
+
+  
+  
+</form>
+
+</frame-component>
