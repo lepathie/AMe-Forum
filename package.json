@@ -3,7 +3,7 @@
   "scripts": {
     "start": "meteor run",
     "start:prod": "AOT=1 ROLLUP=1 meteor --production",
-    "build": "meteor build /.meteor/.bundle/",
+    "build": "meteor build .meteor/.bundle/",
     "clear": "meteor reset",
     "meteor:update": "meteor update",
     "test": "TEST_BROWSER_DRIVER=chrome TEST_CHROME_ARGS='--disable-dev-shm-usage' meteor test --driver-package=meteortesting:mocha --raw-logs",
