@@ -4,5 +4,16 @@
   },
   "pages": {
     "home": "Home"
+  },
+  "widgets": {
+    "forums": {
+      "title": "Forums",
+      "table": {
+        "header": {
+          "name": "Name",
+          "description": "Description"
+        }
+      }
+    }
   }
 }

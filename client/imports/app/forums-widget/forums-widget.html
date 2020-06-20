@@ -1,27 +1,15 @@
-<controlgroup-component title="Forums">
+<controlgroup-component title="{{ 'widgets.forums.title' | translate }}">
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
+        <th>{{ 'widgets.forums.table.header.name' | translate }}</th>
+        <th>{{ 'widgets.forums.table.header.description' | translate }}</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          General
-        </td>
-        <td>
-          Main Forum
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Help
-        </td>
-        <td>
-          Tutorials and Information for how to use the forums
-        </td>
+      <tr *ngFor="let forum of forums | async">
+        <td>{{ forum.name }}</td>
+        <td>{{ forum.description }}</td>
       </tr>
     </tbody>
   </table>
