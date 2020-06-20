@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, TemplateRef, ChangeDetectorRef } from "@angular/core"
+import { Component, ChangeDetectionStrategy, TemplateRef, ChangeDetectorRef, OnDestroy, OnInit } from "@angular/core"
 
 import { Observable, Subscription } from 'rxjs'
 import { MeteorObservable } from 'meteor-rxjs'
@@ -12,22 +12,26 @@ import { Forum } from '../../../../imports/models/forum'
   styleUrls: ["./forums-widget.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ForumsWidgetComponent {
+export class ForumsWidgetComponent implements OnInit, OnDestroy  {
     forums: Observable<Forum[]>
     forumListSubscription: Subscription
 
     constructor(private changeDetectorRef: ChangeDetectorRef) { }
 
-    OnInit() {
+    ngOnInit() {
         this.forumListSubscription = MeteorObservable.subscribe('forums').subscribe(() => {
             this.forums = Forums.find({ }, { sort: { name: 1}})
             this.changeDetectorRef.markForCheck()
         })
     }
 
-    OnDestroy() {
+    ngOnDestroy() {
         if (this.forumListSubscription) {
             this.forumListSubscription.unsubscribe()
         }
+    }
+
+    identify(índex, item: Forum) {
+        return item._id
     }
 }

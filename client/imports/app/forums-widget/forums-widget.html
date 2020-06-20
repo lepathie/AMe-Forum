@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let forum of forums | async">
+      <tr *ngFor="let forum of forums | async; trackBy: identify">
         <td>{{ forum.name }}</td>
         <td>{{ forum.description }}</td>
       </tr>
