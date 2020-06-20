@@ -6,6 +6,7 @@ import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { ForumComponent } from './forum.component'
 import { SharedModule } from '../shared/shared.module'
+import { MatDividerModule } from '@angular/material/divider'
 
 describe(`ForumComponent`, () => {
     beforeEach(async(() => {
@@ -13,6 +14,7 @@ describe(`ForumComponent`, () => {
             declarations: [ForumComponent],
             imports: [
                 SharedModule,
+                MatDividerModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css
@@ -36,4 +38,19 @@ describe(`ForumComponent`, () => {
         expect(heading).to.be.ok
     }))
 
+    it(`should contain an '<header>'` , async(() => {
+        const fixture = TestBed.createComponent(ForumComponent)
+        fixture.detectChanges()
+        const header = fixture.debugElement.query(By.css('header'))
+
+        expect(header).to.be.ok
+    }))
+
+    it(`should contain an '<mat-divider>'` , async(() => {
+        const fixture = TestBed.createComponent(ForumComponent)
+        fixture.detectChanges()
+        const divider = fixture.debugElement.query(By.css('mat-divider'))
+
+        expect(divider).to.be.ok
+    }))
 })
