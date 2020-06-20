@@ -8,11 +8,12 @@ import { HomeComponent } from './home.component'
 import { ForumsWidgetComponent } from '../forums-widget/forums-widget.component'
 import { MockComponent } from 'ng-mocks'
 import { SharedModule } from '../shared/shared.module'
+import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent)],
             imports: [
                 SharedModule,
                 TranslateModule.forRoot({ })
@@ -52,6 +53,14 @@ describe(`HomeComponent`, () => {
         const forumsWidget = fixture.debugElement.query(By.css('forums-widget'))
 
         expect(forumsWidget).to.be.ok
+    }))
+
+    it(`should contain an '<login-registration-component>'` , async(() => {
+        const fixture = TestBed.createComponent(HomeComponent)
+        fixture.detectChanges()
+        const loginRegistration = fixture.debugElement.query(By.css('login-registration-component'))
+
+        expect(loginRegistration).to.be.ok
     }))
 
 })
