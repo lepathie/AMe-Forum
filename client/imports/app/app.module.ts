@@ -8,14 +8,13 @@ import { HomeComponent } from './home/home.component'
 import { AccountsModule } from 'angular2-meteor-accounts-ui'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
-import { HttpClientModule, HttpClient } from '@angular/common/http'
-import { HeaderComponent } from './header/header.component'
-import { FooterComponent } from './footer/footer.component'
+import { HttpClient } from '@angular/common/http'
 import { HomeModule } from './home/home.module'
 import { SharedModule } from './shared/shared.module'
 import { HeaderModule } from './header/header.module'
 import { FooterModule } from './footer/footer.module'
 import { PageNotFoundModule } from './page-not-found/page-not-found.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -24,6 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         FormsModule,
         SharedModule,
         RouterModule.forRoot([
