@@ -15,7 +15,6 @@ Meteor.methods({
     const user = Meteor.user()
     if (!user) {
        throw new Meteor.Error("You are not logged in!")
-      // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
     }
     if (!Roles.userIsInRole(user._id, ['admin', 'mod'])) {
       throw new Meteor.Error("missing permission")

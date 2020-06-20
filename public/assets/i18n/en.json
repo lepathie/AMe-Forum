@@ -7,7 +7,7 @@
   },
   "widgets": {
     "forums": {
-      "title": "Forums", 
+      "title": "Forums",
       "table": {
         "header": {
           "name": "Name",

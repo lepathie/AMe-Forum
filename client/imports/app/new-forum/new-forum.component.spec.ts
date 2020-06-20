@@ -6,11 +6,13 @@ import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { NewForumModule } from './new-forum.module'
 import { NewForumComponent } from './new-forum.component'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe(`NewForumComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
+                RouterTestingModule,
                 NewForumModule,
                 TranslateModule.forRoot({ })
             ]
