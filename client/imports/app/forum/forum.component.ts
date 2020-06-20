@@ -4,8 +4,6 @@ import { Observable, Subscription } from 'rxjs'
 import { Forum } from 'imports/models/forum'
 import { Forums } from 'imports/collections/forums'
 import { MeteorObservable } from 'meteor-rxjs'
-import { Threads } from 'imports/collections/threads'
-import { Thread } from 'imports/models/thread'
 
 @Component({
     selector: 'forum-component',
@@ -16,8 +14,6 @@ import { Thread } from 'imports/models/thread'
 export class ForumComponent implements OnInit {
     forums: Observable<Forum[]>
     forum: Forum
-    threads: Observable<Thread[]>
-    threadListSubscription: Subscription
 
     constructor(
         private changeDetectorRef: ChangeDetectorRef,
