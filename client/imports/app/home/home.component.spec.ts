@@ -6,19 +6,10 @@ import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { HomeModule } from './home.module'
 import { HomeComponent } from './home.component'
-import { Directive } from '@angular/core'
-
-@Directive({
-    // tslint:disable-next-line: directive-selector
-    selector: 'forums-widget'
-  })
-  class ForumsWidgetDirective {
-  }
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ForumsWidgetDirective],
             imports: [
                 HomeModule,
                 TranslateModule.forRoot({ })
