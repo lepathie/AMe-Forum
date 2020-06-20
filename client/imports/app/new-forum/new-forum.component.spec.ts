@@ -27,20 +27,4 @@ describe(`NewForumComponent`, () => {
         expect(home).to.be.ok
     }))
 
-    it(`should contain an '<aside>'` , async(() => {
-        const fixture = TestBed.createComponent(NewForumComponent)
-        fixture.detectChanges()
-        const aside = fixture.debugElement.query(By.css('aside'))
-
-        expect(aside).to.be.ok
-    }))
-
-    it(`should contain an '<main>'` , async(() => {
-        const fixture = TestBed.createComponent(NewForumComponent)
-        fixture.detectChanges()
-        const main = fixture.debugElement.query(By.css('main'))
-
-        expect(main).to.be.ok
-    }))
-
 })
