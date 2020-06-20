@@ -2,14 +2,11 @@ import '../../polyfills.spec'
 
 import { RouterTestingModule, SpyNgModuleFactoryLoader } from '@angular/router/testing'
 import { TestBed, getTestBed, async } from '@angular/core/testing'
-import { of } from 'rxjs'
 import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { ForumComponent } from './forum.component'
 import { ForumModule } from './forum.module'
-import { Forum } from 'imports/models/forum'
-import { spy, spyCall } from 'sinon'
 
 class MockForumComponent extends ForumComponent {
     getForum() {
