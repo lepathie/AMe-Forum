@@ -10,6 +10,7 @@ import { HomeComponent } from './home.component'
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
+            declarations: [HomeComponent],
             imports: [
                 HomeModule,
                 TranslateModule.forRoot({ })
@@ -41,6 +42,14 @@ describe(`HomeComponent`, () => {
         const main = fixture.debugElement.query(By.css('main'))
 
         expect(main).to.be.ok
+    }))
+
+    it(`should contain an '<forums-widget>'` , async(() => {
+        const fixture = TestBed.createComponent(HomeComponent)
+        fixture.detectChanges()
+        const forumsWidget = fixture.debugElement.query(By.css('forums-widget'))
+
+        expect(forumsWidget).to.be.ok
     }))
 
 })
