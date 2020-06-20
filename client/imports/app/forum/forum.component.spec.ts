@@ -1,5 +1,6 @@
 import '../../polyfills.spec'
 
+import { RouterTestingModule } from '@angular/router/testing'
 import { TestBed, getTestBed, async } from '@angular/core/testing'
 import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
@@ -15,6 +16,7 @@ describe(`ForumComponent`, () => {
             imports: [
                 SharedModule,
                 MatDividerModule,
+                RouterTestingModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css
