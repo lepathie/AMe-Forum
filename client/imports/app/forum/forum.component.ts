@@ -32,7 +32,9 @@ export class ForumComponent implements OnInit, OnDestroy {
                         this.forum = forums[0]
                         this.changeDetectorRef.markForCheck()
                     } else {
-                        this.router.navigateByUrl('/404')
+                        if (!this.forumsListSubscription.closed) {
+                            this.router.navigateByUrl('/404')
+                        }
                     }
                 })
             })
