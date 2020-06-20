@@ -18,6 +18,9 @@ jobs:
       - # Install dependencies
         name: Install dependencies
         run: meteor npm ci
+      - # Setup Chromedriver
+        name: Setup Chromedriver
+        uses: nanasess/setup-chromedriver@v1.0.1
       - # Run our testing script
         name: Mocha
         run: meteor npm run test:ci
