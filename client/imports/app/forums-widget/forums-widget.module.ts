@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { SharedModule } from '../shared/shared.module'
 import { ForumsWidgetComponent } from './forums-widget.component'
-import { ControlgroupModule } from '../controlgroup/controlgroup.module'
+import { FrameModule } from '../frame/frame.module'
 
 @NgModule({
     declarations: [
@@ -9,7 +9,7 @@ import { ControlgroupModule } from '../controlgroup/controlgroup.module'
     ],
     imports: [
         SharedModule,
-        ControlgroupModule
+        FrameModule
     ],
     exports: [
         ForumsWidgetComponent

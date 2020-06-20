@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy, Input } from "@angular/core"
 
 @Component({
-  selector: "controlgroup-component",
-  templateUrl: "./controlgroup.html",
-  styleUrls: ["./controlgroup.scss"],
+  selector: "frame-component",
+  templateUrl: "./frame.html",
+  styleUrls: ["./frame.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ControlgroupComponent {
+export class FrameComponent {
   @Input() title
 }

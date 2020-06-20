@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core'
 import { SharedModule } from '../shared/shared.module'
-import { ControlgroupComponent } from './controlgroup.component'
+import { FrameComponent } from './frame.component'
 
 @NgModule({
     declarations: [
-        ControlgroupComponent
+        FrameComponent
     ],
     imports: [
         SharedModule
     ],
     exports: [
-        ControlgroupComponent
+        FrameComponent
     ]
 })
-export class ControlgroupModule { }
+export class FrameModule { }

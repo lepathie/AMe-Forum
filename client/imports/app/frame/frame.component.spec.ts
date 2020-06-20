@@ -1,8 +1,8 @@
 import '../../polyfills.spec'
 
-import { ControlgroupModule } from "./controlgroup.module"
+import { FrameModule } from "./frame.module"
 import { TestBed, getTestBed, async } from '@angular/core/testing'
-import { ControlgroupComponent } from './controlgroup.component'
+import { FrameComponent } from './frame.component'
 import { expect } from 'chai'
 import { TranslateModule } from '@ngx-translate/core'
 
@@ -10,7 +10,7 @@ describe(`ControlgroupComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
-                ControlgroupModule,
+                FrameModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css
@@ -21,9 +21,9 @@ describe(`ControlgroupComponent`, () => {
     })
 
     it('should create the component', async(() => {
-        const fixture = TestBed.createComponent(ControlgroupComponent)
-        const Controlgroup = fixture.debugElement.componentInstance
-        expect(Controlgroup).to.be.ok
+        const fixture = TestBed.createComponent(FrameComponent)
+        const frame = fixture.debugElement.componentInstance
+        expect(frame).to.be.ok
     }))
 
 })
