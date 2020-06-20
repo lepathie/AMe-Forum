@@ -15,6 +15,8 @@ import { HeaderModule } from './header/header.module'
 import { FooterModule } from './footer/footer.module'
 import { PageNotFoundModule } from './page-not-found/page-not-found.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ForumComponent } from './forum/forum.component'
+import { ForumModule } from './forum/forum.module'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -37,6 +39,10 @@ export function createTranslateLoader(http: HttpClient) {
                 path: 'home',
                 component: HomeComponent
             },
+            {
+                path: 'forum/:id',
+                component: ForumComponent
+            },
             // 404 Page
             {
                 path: '**',
@@ -52,6 +58,7 @@ export function createTranslateLoader(http: HttpClient) {
                 deps: [HttpClient]
             }
         }),
+        ForumModule,
         HomeModule,
         HeaderModule,
         FooterModule,
