@@ -1,5 +1,6 @@
 import '../../polyfills.spec'
 
+import { RouterTestingModule } from '@angular/router/testing'
 import { HeaderModule } from "./header.module"
 import { TestBed, getTestBed, async } from '@angular/core/testing'
 import { HeaderComponent } from './header.component'
@@ -12,6 +13,7 @@ describe(`HeaderComponent`, () => {
         TestBed.configureTestingModule({
             imports: [
                 HeaderModule,
+                RouterTestingModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css

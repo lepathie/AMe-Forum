@@ -1,8 +1,5 @@
 import { Forums } from 'imports/collections/forums'
-import { Threads } from 'imports/collections/threads'
-import { Posts } from "imports/collections/posts"
 import _ from 'underscore'
-import { identifierModuleUrl } from '@angular/compiler'
 /**
  *  @file This file contains the defaults for this AMe-Forum installation
  *  Feel free to customize for your needs.
