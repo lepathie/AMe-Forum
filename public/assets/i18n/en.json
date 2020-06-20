@@ -28,7 +28,7 @@
             "placeholder": "This forum contains..."
           },
           "submit": {
-            "name": "Create"
+            "label": "Create"
           }
 
         }
