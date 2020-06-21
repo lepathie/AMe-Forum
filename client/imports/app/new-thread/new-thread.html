@@ -2,11 +2,11 @@
     <form [formGroup]="myForm">
       <mat-form-field>
         <mat-label>{{ 'widgets.new-thread.form.inputs.title.label' | translate }}</mat-label>
-        <input matInput placeholder="{{ 'widgets.new-thread.form.inputs.title.placeholder' | translate }}" formControlName="title">
+        <input matInput placeholder="{{ 'widgets.new-thread.form.inputs.title.placeholder' | translate }}" formControlName="title" required>
       </mat-form-field>
       <mat-form-field>
         <mat-label>{{ 'widgets.new-thread.form.inputs.inputtext.label' | translate }}</mat-label>
-        <textarea matInput placeholder="{{ 'widgets.new-thread.form.inputs.inputtext.placeholder' | translate }}" formControlName="text"></textarea>
+        <textarea matInput placeholder="{{ 'widgets.new-thread.form.inputs.inputtext.placeholder' | translate }}" formControlName="text" required></textarea>
       </mat-form-field>
       <button mat-flat-button color="accent" (click)="onSubmit()">{{ 'widgets.new-thread.form.inputs.submit.label' | translate }}</button>
     </form>

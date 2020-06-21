@@ -21,6 +21,6 @@ Meteor.methods({
       }
       const timestamp = new Date()
 
-      return Threads.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
+      return Threads.collection.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
   }
 })
