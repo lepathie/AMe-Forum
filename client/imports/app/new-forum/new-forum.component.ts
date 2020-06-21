@@ -12,18 +12,18 @@ import { HomeComponent } from '../home/home.component'
 })
 export class NewForumComponent implements OnInit{
 
-myForm: FormGroup
+    CreateTread: FormGroup
 
-constructor(private fb: FormBuilder, private router: Router) { }
-ngOnInit() {
-    this.myForm = this.fb.group({
+    constructor(private fb: FormBuilder, private router: Router) { }
+    ngOnInit() {
+    this.CreateTread = this.fb.group({
         title: '',
         description: ''
     })
 }
 
-onSubmit() {
-    const formValue = this.myForm.value
+    onSubmit() {
+    const formValue = this.CreateTread.value
     if (formValue.title !== '' && formValue.description !== '') {
         // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
         Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
