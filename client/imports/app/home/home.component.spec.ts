@@ -10,11 +10,12 @@ import { MockComponent } from 'ng-mocks'
 import { SharedModule } from '../shared/shared.module'
 import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 import { RouterTestingModule } from '@angular/router/testing'
+import { FrameComponent } from '../frame/frame.component'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent), MockComponent(FrameComponent)],
             imports: [
                 RouterTestingModule,
                 SharedModule,
