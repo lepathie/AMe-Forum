@@ -8,11 +8,13 @@ import { AdminComponent } from './admin.component'
 import { AdminModule } from './admin.module'
 import { RouterTestingModule } from '@angular/router/testing'
 import { SharedModule } from '../shared/shared.module'
+import { MockComponent } from 'ng-mocks'
+import { NewForumComponent } from '../new-forum/new-forum.component'
 
 describe(`AdminComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [],
+            declarations: [MockComponent(NewForumComponent)],
             imports: [
                 RouterTestingModule,
                 AdminModule,
