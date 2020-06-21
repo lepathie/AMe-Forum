@@ -1,5 +1,5 @@
 <frame-component title="{{ 'widgets.forums.title' | translate }}">
-  <table>
+  <table *ngIf="(forums | async)?.length>0; else loading">
     <thead>
       <tr>
         <th>{{ 'widgets.forums.table.header.name' | translate }}</th>
@@ -17,3 +17,7 @@
     </tbody>
   </table>
 </frame-component>
+
+<ng-template #loading>
+  {{ 'widgets.forums.msg.no-active-forums' | translate }}
+</ng-template>

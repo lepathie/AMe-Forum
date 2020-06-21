@@ -20,7 +20,7 @@ export class ForumsWidgetComponent implements OnInit, OnDestroy  {
 
     ngOnInit() {
         this.forumListSubscription = MeteorObservable.subscribe('forums').subscribe(() => {
-            this.forums = Forums.find({ }, { sort: { name: 1}})
+            this.forums = Forums.find({ active: true }, { sort: { name: 1}})
             this.changeDetectorRef.markForCheck()
         })
     }
