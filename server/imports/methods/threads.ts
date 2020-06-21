@@ -8,21 +8,19 @@ Meteor.methods({
      * @param _forumId ID of the forum the new thread should be placed in
      * @param _threadName name of the new thread
      */
-    createThread(_forumId: string, _threadName: string): string {
-    const user = Meteor.user()
-    if (user === null) {
-      throw new Meteor.Error("You are not logged in!")
-      // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
-    }
-    if (_forumId === "") {
-      throw new Meteor.Error("ForumId is required!")
-    }
-    if (_threadName === "") {
+    createThread(_forumId: string, _threadName: string) {
+      const user = Meteor.user()
+      if (user === null) {
+        throw new Meteor.Error("You are not logged in!")
+      }
+      if (_forumId === "") {
+        throw new Meteor.Error("ForumId is required!")
+      }
+      if (_threadName === "") {
         throw new Meteor.Error("ThreadName is required!")
       }
-    const timestamp = new Date()
-      // Threads.collection.insert => gibt id als string zurück
-    const threadId = Threads.collection.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
-    return threadId
+      const timestamp = new Date()
+
+      return Threads.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
   }
 })
