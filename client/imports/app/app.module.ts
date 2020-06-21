@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { HomeComponent } from './home/home.component'
-import { AccountsModule } from 'angular2-meteor-accounts-ui'
+import { AccountsModule, AuthGuard } from 'angular2-meteor-accounts-ui'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core'
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import { HttpClient } from '@angular/common/http'
@@ -14,11 +13,13 @@ import { SharedModule } from './shared/shared.module'
 import { HeaderModule } from './header/header.module'
 import { FooterModule } from './footer/footer.module'
 import { PageNotFoundModule } from './page-not-found/page-not-found.module'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ForumComponent } from './forum/forum.component'
 import { ForumModule } from './forum/forum.module'
 import { NewForumComponent } from './new-forum/new-forum.component'
 import { NewForumModule } from './new-forum/new-forum.module'
+import { AdminComponent } from './admin/admin.component'
+import { AdminModule } from './admin/admin.module'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -28,7 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        FormsModule,
         SharedModule,
         RouterModule.forRoot([
             // Home
@@ -42,12 +42,13 @@ export function createTranslateLoader(http: HttpClient) {
                 component: HomeComponent
             },
             {
-                path: 'forum/:id',
-                component: ForumComponent
+                path: 'admin',
+                component: AdminComponent,
+                canActivate: [AuthGuard]
             },
             {
-                path: 'new-forum',
-                component: NewForumComponent
+                path: 'forum/:id',
+                component: ForumComponent
             },
             // 404 Page
             {
@@ -69,6 +70,7 @@ export function createTranslateLoader(http: HttpClient) {
         HeaderModule,
         FooterModule,
         PageNotFoundModule,
+        AdminModule,
         NewForumModule
     ],
     declarations: [

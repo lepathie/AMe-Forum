@@ -3,7 +3,11 @@
     "404": "Page Not Found"
   },
   "pages": {
-    "home": "Home"
+    "home": "Home",
+    "admin": {
+      "navigateTo": "Navigate to Adminstration",
+      "heading": "Administration"
+    }
   },
   "widgets": {
     "forums": {
@@ -53,6 +57,9 @@
     },
     "loginRegistration": {
       "title": "Login / Registration"
+    },
+    "actions": {
+      "title": "Actions"
     }
   }
 }

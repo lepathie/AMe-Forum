@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core'
+import { Component, ChangeDetectionStrategy, OnChanges, OnInit } from '@angular/core'
+import { Meteor } from 'meteor/meteor'
+import { Roles } from 'meteor/alanning:roles'
 
 @Component({
     selector: 'home-component',
@@ -6,4 +8,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core'
     styleUrls: [ './home.scss' ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent { }
+export class HomeComponent implements OnInit{
+    user
+
+    ngOnInit() {
+        Tracker.autorun(() => {
+            this.user = Meteor.user()
+        })
+    }
+}
