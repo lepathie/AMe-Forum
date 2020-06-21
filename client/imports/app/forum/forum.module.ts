@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core"
 import { ForumComponent } from './forum.component'
 import { SharedModule } from '../shared/shared.module'
 import { MatDividerModule } from '@angular/material/divider'
+import { NewThreadModule } from '../new-thread/new-thread.module'
 
 @NgModule({
     declarations: [
@@ -9,7 +10,8 @@ import { MatDividerModule } from '@angular/material/divider'
     ],
     imports: [
         SharedModule,
-        MatDividerModule
+        MatDividerModule,
+        NewThreadModule
     ],
     exports: [
         ForumComponent

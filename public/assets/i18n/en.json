@@ -37,6 +37,26 @@
     "loginRegistration":{
       "title": "Login / Registration"
     }
+    ,
+    "new-thread":{
+      "title": "Create Thread",
+      "form": {
+        "inputs": {
+          "title": {
+            "label": "Title",
+            "placeholder": "A Thread"
+          },
+          "submit": {
+            "label": "Create"
+          },
+          "inputtext": {
+            "label": "Text",
+            "placeholder": "Something important..."
+          }
+
+        }
+      }
+    }
     
   }
 }

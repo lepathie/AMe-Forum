@@ -19,6 +19,8 @@ import { ForumComponent } from './forum/forum.component'
 import { ForumModule } from './forum/forum.module'
 import { NewForumComponent } from './new-forum/new-forum.component'
 import { NewForumModule } from './new-forum/new-forum.module'
+import { NewThreadComponent } from './new-thread/new-thread.component'
+import { NewThreadModule } from './new-thread/new-thread.module'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -49,6 +51,10 @@ export function createTranslateLoader(http: HttpClient) {
                 path: 'new-forum',
                 component: NewForumComponent
             },
+            {
+                path: 'new-thread',
+                component: NewThreadComponent
+            },
             // 404 Page
             {
                 path: '**',
@@ -69,7 +75,8 @@ export function createTranslateLoader(http: HttpClient) {
         HeaderModule,
         FooterModule,
         PageNotFoundModule,
-        NewForumModule
+        NewForumModule,
+        NewThreadModule
     ],
     declarations: [
         AppComponent
