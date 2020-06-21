@@ -6,12 +6,14 @@ import { By } from '@angular/platform-browser'
 import { TranslateModule } from '@ngx-translate/core'
 import { AdminComponent } from './admin.component'
 import { AdminModule } from './admin.module'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe(`AdminComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [],
             imports: [
+                RouterTestingModule,
                 AdminModule,
                 TranslateModule.forRoot({ })
             ]
