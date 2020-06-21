@@ -1,0 +1,29 @@
+<frame-component title="{{ 'widgets.threads.title' | translate }}">
+  <table *ngIf="(threads | async)?.length>0; else loading">
+    <thead>
+      <tr>
+        <th>{{ 'widgets.threads.table.header.name' | translate }}</th>
+        <th>{{ 'widgets.threads.table.header.creator' | translate }}</th>
+        <th>{{ 'widgets.threads.table.header.views' | translate }}</th>
+        <th>{{ 'widgets.threads.table.header.follows' | translate }}</th>
+        <th>{{ 'widgets.threads.table.header.date' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let thread of threads | async; trackBy: identify"
+        routerLink="/forum/{{ forumID }}/{{ thread._id }}"
+      >
+        <td>{{ thread.name }}</td>
+        <td>{{ thread.creator }}</td>
+        <td>{{ thread.viewCounter }}</td>
+        <td>{{ thread.followCounter }}</td>
+        <td>{{ thread.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</frame-component>
+
+<ng-template #loading>
+  {{ 'widgets.threads.msg.no-threads-in-forum' | translate }}
+</ng-template>

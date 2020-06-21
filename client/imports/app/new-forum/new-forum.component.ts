@@ -26,7 +26,8 @@ onSubmit() {
     // fehlender Berechtigungscheck
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.description !== '') {
-        const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
+        // TODO: Implement Response-check
+        const response = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
         this.router.navigateByUrl('/home')
     }
     else {

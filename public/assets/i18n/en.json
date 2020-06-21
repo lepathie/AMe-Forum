@@ -8,6 +8,9 @@
   "widgets": {
     "forums": {
       "title": "Forums",
+      "msg": {
+        "no-active-forums": "There currently aren't any active forums."
+      },
       "table": {
         "header": {
           "name": "Name",
@@ -15,7 +18,22 @@
         }
       }
     },
-    "new-forum":{
+    "threads": {
+      "title": "Threads",
+      "msg": {
+        "no-threads-in-forum": "There currently aren't any threads in this forum."
+      },
+      "table": {
+        "header": {
+          "name": "Name",
+          "creator": "Creator",
+          "views": "Views",
+          "follows": "Follows",
+          "date": "Created on"
+        }
+      }
+    },
+    "new-forum": {
       "title": "Create Forum",
       "form": {
         "inputs": {
@@ -30,13 +48,11 @@
           "submit": {
             "label": "Create"
           }
-
         }
       }
     },
-    "loginRegistration":{
+    "loginRegistration": {
       "title": "Login / Registration"
     }
-    
   }
 }
