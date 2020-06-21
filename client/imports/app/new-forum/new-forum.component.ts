@@ -1,8 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { Message } from '@angular/compiler/src/i18n/i18n_ast'
 import { Router } from '@angular/router'
-import { HomeComponent } from '../home/home.component'
 
 @Component({
     selector: 'new-forum-component',
@@ -23,14 +21,16 @@ ngOnInit() {
 }
 
 onSubmit() {
-    // fehlender Berechtigungscheck
+    // TODO: Add Authority-check
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.description !== '') {
-        const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
+        const response = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
+        // TODO: Check response and show OK-Message with routelink to created forum
         this.router.navigateByUrl('/home')
     }
     else {
-        alert('Bitte alle Felder ausfüllen')
+        // TODO: Replace with literal
+        alert('Please fill out all fields')
     }
 }
 }
