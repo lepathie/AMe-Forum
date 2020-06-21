@@ -21,7 +21,7 @@ Meteor.methods({
         throw new Meteor.Error("ThreadName is required!")
       }
     const timestamp = new Date()
-
+      // Threads.collection.insert => gibt id als string zurück
     const threadId = Threads.collection.insert({ forumId: _forumId, name: _threadName, viewCounter: 0, followCounter: 0, date: timestamp, creator: user._id })
     return threadId
   }
