@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core'
 import { AdminComponent } from './admin.component'
 import { AdminModule } from './admin.module'
 import { RouterTestingModule } from '@angular/router/testing'
+import { SharedModule } from '../shared/shared.module'
 
 describe(`AdminComponent`, () => {
     beforeEach(async(() => {
@@ -15,6 +16,7 @@ describe(`AdminComponent`, () => {
             imports: [
                 RouterTestingModule,
                 AdminModule,
+                SharedModule,
                 TranslateModule.forRoot({ })
             ]
         }).compileComponents() // compile html and css
