@@ -10,28 +10,27 @@ import { Router } from '@angular/router'
 })
 export class NewForumComponent implements OnInit{
 
-myForm: FormGroup
+    CreateTread: FormGroup
 
-constructor(private fb: FormBuilder, private router: Router) { }
-ngOnInit() {
-    this.myForm = this.fb.group({
-        title: '',
-        description: ''
-    })
-}
+    constructor(private fb: FormBuilder, private router: Router) { }
+    ngOnInit() {
+        this.CreateTread = this.fb.group({
+            title: '',
+            description: ''
+        })
+    }
 
-onSubmit() {
-    // TODO: Add Authority-check
-    const formValue = this.myForm.value
-    if (formValue.title !== '' && formValue.description !== '') {
-        // TODO: Implement Response-check
-        const response = Meteor.call("createForum", formValue.title, formValue.description)
-        // TODO: Check response and show OK-Message with routelink to created forum
-        this.router.navigateByUrl('/home')
+    onSubmit() {
+        const formValue = this.CreateTread.value
+        if (formValue.title !== '') {
+            // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
+            Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
+                if (error ) {
+                    alert('Could not create Forum:\nMaybe you are not logged-in or you don\'t have the permission to create one')
+                    return
+                }
+            })
+            this.router.navigateByUrl('/home')
+        }
     }
-    else {
-        // TODO: Replace with literal
-        alert('Please fill out all fields')
-    }
-}
 }

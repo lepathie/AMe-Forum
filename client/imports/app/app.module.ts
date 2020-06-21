@@ -17,6 +17,8 @@ import { ForumComponent } from './forum/forum.component'
 import { ForumModule } from './forum/forum.module'
 import { NewForumComponent } from './new-forum/new-forum.component'
 import { NewForumModule } from './new-forum/new-forum.module'
+import { NewThreadComponent } from './new-thread/new-thread.component'
+import { NewThreadModule } from './new-thread/new-thread.module'
 import { AdminComponent } from './admin/admin.component'
 import { AdminModule } from './admin/admin.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -50,6 +52,14 @@ export function createTranslateLoader(http: HttpClient) {
                 path: 'forum/:id',
                 component: ForumComponent
             },
+            {
+                path: 'new-forum',
+                component: NewForumComponent
+            },
+            {
+                path: 'new-thread',
+                component: NewThreadComponent
+            },
             // 404 Page
             {
                 path: '**',
@@ -70,6 +80,7 @@ export function createTranslateLoader(http: HttpClient) {
         HeaderModule,
         FooterModule,
         PageNotFoundModule,
+        NewThreadModule,
         AdminModule,
         NewForumModule
     ],

@@ -61,5 +61,30 @@
     "actions": {
       "title": "Actions"
     }
+    ,
+    "new-thread":{
+      "title": "Create Thread",
+      "form": {
+        "inputs": {
+          "title": {
+            "label": "Title",
+            "placeholder": "A Thread"
+          },
+          "submit": {
+            "label": "Create"
+          },
+          "inputtext": {
+            "label": "Text",
+            "placeholder": "Something important..."
+          }
+
+        }
+      },
+      "alerts": {
+        "notcreated": "Could not create Thread",
+        "notfilled": "Please fill all fields",
+        "created": "Thread Created \""
+      }
+    }
   }
 }
