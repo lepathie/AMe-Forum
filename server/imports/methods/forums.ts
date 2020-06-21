@@ -26,7 +26,7 @@ Meteor.methods({
       throw new Meteor.Error("Description is required!")
     }
 
-    return Forums.insert({
+    return Forums.collection.insert({
       active: true,
       name: _forumName,
       description: _description

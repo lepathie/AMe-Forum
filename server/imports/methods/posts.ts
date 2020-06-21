@@ -22,6 +22,6 @@ Meteor.methods({
       throw new Meteor.Error("Comment is required!")
     }
     const timestamp = new Date()
-    return Posts.insert({ threadId: _threadId, quotedPost: _quotedText, textQuoted: _quotedText, comment: _comment, userId: user._id, postTime: timestamp })
+    return Posts.collection.insert({ threadId: _threadId, quotedPost: _quotedText, textQuoted: _quotedText, comment: _comment, userId: user._id, postTime: timestamp })
   }
 })
