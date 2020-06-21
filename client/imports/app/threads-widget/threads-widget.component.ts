@@ -13,7 +13,7 @@ import { Thread } from '../../../../imports/models/thread'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreadsWidgetComponent implements OnInit, OnDestroy  {
-    @Input() forumID
+    @Input() forumId
 
     threads: Observable<Thread[]>
     threadListSubscription: Subscription
@@ -22,7 +22,7 @@ export class ThreadsWidgetComponent implements OnInit, OnDestroy  {
 
     ngOnInit() {
         this.threadListSubscription = MeteorObservable.subscribe('threads').subscribe(() => {
-            this.threads = Threads.find({ forumID: this.forumID }, { sort: { date: 1}})
+            this.threads = Threads.find({ forumId: this.forumId }, { sort: { date: 1}})
             this.changeDetectorRef.markForCheck()
         })
     }
