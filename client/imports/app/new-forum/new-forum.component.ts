@@ -14,23 +14,23 @@ export class NewForumComponent implements OnInit{
 
     constructor(private fb: FormBuilder, private router: Router) { }
     ngOnInit() {
-    this.CreateTread = this.fb.group({
-        title: '',
-        description: ''
-    })
-}
+        this.CreateTread = this.fb.group({
+            title: '',
+            description: ''
+        })
+    }
 
     onSubmit() {
-    const formValue = this.CreateTread.value
-    if (formValue.title !== '') {
-        // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
-        Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
-            if (error ) {
-                alert('Could not create Forum:\nMaybe you are not logged-in or you don\'t have the permission to create one')
-                return
-            }
-        })
-        this.router.navigateByUrl('/home')
+        const formValue = this.CreateTread.value
+        if (formValue.title !== '') {
+            // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
+            Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
+                if (error ) {
+                    alert('Could not create Forum:\nMaybe you are not logged-in or you don\'t have the permission to create one')
+                    return
+                }
+            })
+            this.router.navigateByUrl('/home')
+        }
     }
-}
 }

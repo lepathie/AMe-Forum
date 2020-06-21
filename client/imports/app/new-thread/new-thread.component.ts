@@ -13,8 +13,11 @@ import { Thread } from 'imports/models/thread'
 })
 export class NewThreadComponent implements OnInit{
     @Input() forumId
+    
     myForm: FormGroup
+
     constructor(private fb: FormBuilder) { }
+
     ngOnInit() {
         this.myForm = this.fb.group({
             title: '',
