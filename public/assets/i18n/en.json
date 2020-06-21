@@ -60,10 +60,12 @@
     },
     "actions": {
       "title": "Actions"
-    }
-    ,
-    "new-thread":{
+    },
+    "new-thread": {
       "title": "Create Thread",
+      "msg": {
+        "must-be-signed-in": "You must be signed in to start a new Thread."
+      },
       "form": {
         "inputs": {
           "title": {
@@ -77,7 +79,6 @@
             "label": "Text",
             "placeholder": "Something important..."
           }
-
         }
       },
       "alerts": {

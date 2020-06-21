@@ -15,10 +15,15 @@ export class NewThreadComponent implements OnInit{
     @Input() forumId
 
     myForm: FormGroup
+    user: Meteor.User
 
     constructor(private fb: FormBuilder) { }
 
     ngOnInit() {
+        Tracker.autorun(() => {
+            this.user = Meteor.user()
+        })
+
         this.myForm = this.fb.group({
             title: '',
             text: ''
