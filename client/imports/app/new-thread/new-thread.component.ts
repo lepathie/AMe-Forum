@@ -26,10 +26,10 @@ onSubmit() {
     if (formValue.title !== '') {
         Meteor.call("createThread", this.forumId, formValue.title, formValue.text, (error, result) => {
             if (error ) {
-                alert('Could not create Thread')
+                alert('Could not create Thread, maybe you are not logged-in')
                 return
               }
-              // result is the threadId-String at the moment => will be an observable in the future
+            // result is the threadId-String at the moment => will be an observable in the future
             Meteor.call("addPost", result, "", "", formValue.text)
             alert("Thread Created \"" + formValue.title + "\"")
             // => Route zum erstellten Thread?

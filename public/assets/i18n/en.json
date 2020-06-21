@@ -55,6 +55,11 @@
           }
 
         }
+      },
+      "alerts": {
+        "notcreated": "Could not create Thread",
+        "notfilled": "Please fill all fields",
+        "created": "Thread Created \""
       }
     }
     
