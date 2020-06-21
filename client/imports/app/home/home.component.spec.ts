@@ -9,12 +9,14 @@ import { ForumsWidgetComponent } from '../forums-widget/forums-widget.component'
 import { MockComponent } from 'ng-mocks'
 import { SharedModule } from '../shared/shared.module'
 import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
+import { RouterTestingModule } from '@angular/router/testing'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent)],
             imports: [
+                RouterTestingModule,
                 SharedModule,
                 TranslateModule.forRoot({ })
             ]
