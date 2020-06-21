@@ -1,7 +1,5 @@
 import { NgModule } from "@angular/core"
 import { HomeComponent } from './home.component'
-import { FooterModule } from '../footer/footer.module'
-import { HeaderModule } from '../header/header.module'
 import { SharedModule } from '../shared/shared.module'
 import { ForumsWidgetModule } from '../forums-widget/forums-widget.module'
 import { LoginRegistrationModule } from '../login-registration/login-registration.module'
@@ -12,8 +10,6 @@ import { LoginRegistrationModule } from '../login-registration/login-registratio
     ],
     imports: [
         SharedModule,
-        HeaderModule,
-        FooterModule,
         LoginRegistrationModule,
         ForumsWidgetModule
     ],

@@ -7,15 +7,13 @@ import { TranslateModule } from '@ngx-translate/core'
 import { HomeComponent } from './home.component'
 import { ForumsWidgetComponent } from '../forums-widget/forums-widget.component'
 import { MockComponent } from 'ng-mocks'
-import { HeaderComponent } from '../header/header.component'
-import { FooterComponent } from '../footer/footer.component'
 import { SharedModule } from '../shared/shared.module'
 import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(HeaderComponent), MockComponent(FooterComponent), MockComponent(LoginRegistrationComponent)],
+            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent)],
             imports: [
                 SharedModule,
                 TranslateModule.forRoot({ })

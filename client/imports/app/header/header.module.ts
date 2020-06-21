@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core'
 import { HeaderComponent } from './header.component'
 import { SharedModule } from '../shared/shared.module'
+import { RouterModule } from '@angular/router'
 
 @NgModule({
     declarations: [
         HeaderComponent
     ],
     imports: [
-        SharedModule
+        SharedModule,
+        RouterModule
     ],
     exports: [
         HeaderComponent
