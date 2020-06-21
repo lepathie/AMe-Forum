@@ -10,7 +10,7 @@ Meteor.methods({
      */
     createThread(_forumId: string, _threadName: string) {
       const user = Meteor.user()
-      if (user === null) {
+      if (!user) {
         throw new Meteor.Error("You are not logged in!")
       }
       if (_forumId === "") {

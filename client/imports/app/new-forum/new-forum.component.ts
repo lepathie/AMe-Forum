@@ -31,12 +31,8 @@ onSubmit() {
                 alert('Could not create Forum:\nMaybe you are not logged-in or you don\'t have the permission to create one')
                 return
             }
-            alert('Froum: "' + formValue.title + '" created')
         })
         this.router.navigateByUrl('/home')
-    }
-    else {
-        alert('Bitte alle Felder ausfüllen')
     }
 }
 }

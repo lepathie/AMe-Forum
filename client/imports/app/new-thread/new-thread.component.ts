@@ -39,9 +39,6 @@ export class NewThreadComponent implements OnInit{
                 }
             })
         }
-        else {
-            // alert('Please fill all fields')
-        }
     }
 
     private clearForm() {
