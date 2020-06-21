@@ -23,10 +23,17 @@ ngOnInit() {
 }
 
 onSubmit() {
-    // fehlender Berechtigungscheck
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.description !== '') {
-        const forumId = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
+        // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
+        Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
+            if (error ) {
+                alert('Could not create Forum:\nMaybe you are not logged-in or you don\'t have the permission to create one')
+                return
+              }
+            alert('Froum: "' + formValue.title + '" created')
+            })
+
         this.router.navigateByUrl('/home')
     }
     else {
