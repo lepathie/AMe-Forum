@@ -1,8 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
-import { Message } from '@angular/compiler/src/i18n/i18n_ast'
 import { Router } from '@angular/router'
-import { HomeComponent } from '../home/home.component'
 
 @Component({
     selector: 'new-forum-component',

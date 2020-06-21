@@ -1,6 +1,6 @@
 import '../../polyfills.spec'
 
-import { RouterTestingModule, SpyNgModuleFactoryLoader } from '@angular/router/testing'
+import { RouterTestingModule } from '@angular/router/testing'
 import { TestBed, getTestBed, async } from '@angular/core/testing'
 import { expect } from 'chai'
 import { By } from '@angular/platform-browser'
