@@ -31,6 +31,5 @@ Meteor.methods({
       name: _forumName,
       description: _description
     })
-    // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1})
   }
 })

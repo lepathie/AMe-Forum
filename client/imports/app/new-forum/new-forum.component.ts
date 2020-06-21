@@ -24,7 +24,8 @@ onSubmit() {
     // TODO: Add Authority-check
     const formValue = this.myForm.value
     if (formValue.title !== '' && formValue.description !== '') {
-        const response = Meteor.call("createForum", formValue.titel, formValue.beschreibung)
+        // TODO: Implement Response-check
+        const response = Meteor.call("createForum", formValue.title, formValue.description)
         // TODO: Check response and show OK-Message with routelink to created forum
         this.router.navigateByUrl('/home')
     }
