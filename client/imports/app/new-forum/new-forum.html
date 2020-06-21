@@ -2,7 +2,7 @@
     <form [formGroup]="CreateTread">
       <mat-form-field>
         <mat-label>{{ 'widgets.new-forum.form.inputs.title.label' | translate }}</mat-label>
-        <input matInput placeholder="{{ 'widgets.new-forum.form.inputs.title.placeholder' | translate }}" formControlName="title">
+        <input matInput placeholder="{{ 'widgets.new-forum.form.inputs.title.placeholder' | translate }}" formControlName="title" required> 
       </mat-form-field>
       <mat-form-field>
         <mat-label>{{ 'widgets.new-forum.form.inputs.description.label' | translate }}</mat-label>

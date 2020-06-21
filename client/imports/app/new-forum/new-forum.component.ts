@@ -22,7 +22,7 @@ export class NewForumComponent implements OnInit{
 
     onSubmit() {
     const formValue = this.CreateTread.value
-    if (formValue.title !== '' && formValue.description !== '') {
+    if (formValue.title !== '') {
         // const forumId = Meteor.call("createForum", formValue.title, formValue.description)
         Meteor.call("createForum", formValue.title, formValue.description, (error, result) => {
             if (error ) {

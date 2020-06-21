@@ -20,5 +20,5 @@ export interface Forum {
     /**
      * Description: Description of this forum
      */
-    description: string
+    description?: string
 }

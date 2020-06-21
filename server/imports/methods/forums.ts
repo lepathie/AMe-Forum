@@ -22,9 +22,6 @@ Meteor.methods({
     if (_forumName === "") {
       throw new Meteor.Error("ForumName is required!")
     }
-    if (_description === "") {
-      throw new Meteor.Error("Description is required!")
-    }
 
     return Forums.collection.insert({
       active: true,
