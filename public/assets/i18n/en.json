@@ -7,6 +7,12 @@
     "admin": {
       "navigateTo": "Navigate to Adminstration",
       "heading": "Administration"
+    },
+    "thread": {
+      "answers":{
+        "empty": "There aren't any answers to this thread yet.",
+        "title": "Answers"
+      }
     }
   },
   "widgets": {

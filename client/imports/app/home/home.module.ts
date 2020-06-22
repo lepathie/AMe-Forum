@@ -6,6 +6,7 @@ import { LoginRegistrationModule } from '../login-registration/login-registratio
 import { MatButtonModule } from '@angular/material/button'
 import { FrameModule } from '../frame/frame.module'
 import { RouterModule } from '@angular/router'
+import { MatDividerModule } from '@angular/material/divider'
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router'
         ForumsWidgetModule,
         MatButtonModule,
         FrameModule,
-        RouterModule
+        RouterModule,
+        MatDividerModule
     ],
     exports: [
         HomeComponent

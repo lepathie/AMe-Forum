@@ -24,6 +24,7 @@ import { AdminModule } from './admin/admin.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ThreadComponent } from './thread/thread.component'
 import { ThreadModule } from './thread/thread.module'
+import { MarkedPipe } from './shared/marked.pipe'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
