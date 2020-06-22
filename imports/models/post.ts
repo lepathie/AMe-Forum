@@ -23,9 +23,9 @@ export interface Post {
     textQuoted?: string
 
     /**
-     * Comment: Text of the post
+     * content: Text of the post
      */
-    comment: string
+    content: string
 
     /**
      * User ID: User that wrote this post

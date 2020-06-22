@@ -19,7 +19,7 @@ Meteor.methods({
     if (!Roles.userIsInRole(user._id, ['admin', 'mod'])) {
       throw new Meteor.Error("missing permission")
    }
-    if (_forumName === "") {
+    if (!_forumName || _forumName === "") {
       throw new Meteor.Error("ForumName is required!")
     }
 

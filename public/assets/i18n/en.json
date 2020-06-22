@@ -9,13 +9,16 @@
       "heading": "Administration"
     },
     "thread": {
-      "answers":{
+      "answers": {
         "empty": "There aren't any answers to this thread yet.",
         "title": "Answers"
       }
     }
   },
   "widgets": {
+    "general": {
+      "we-support-markdown": "We support Markdown. 😉"
+    },
     "forums": {
       "title": "Forums",
       "msg": {
@@ -91,6 +94,23 @@
         "notcreated": "Could not create Thread",
         "notfilled": "Please fill all fields",
         "created": "Thread Created \""
+      }
+    },
+    "new-post": {
+      "title": "Create Post",
+      "msg": {
+        "must-be-signed-in": "You must be signed in to comment on this thread."
+      },
+      "form": {
+        "inputs": {
+          "submit": {
+            "label": "Create"
+          },
+          "text": {
+            "label": "Text",
+            "placeholder": "I like your style..."
+          }
+        }
       }
     }
   }
