@@ -7,6 +7,12 @@
     "admin": {
       "navigateTo": "Navigate to Adminstration",
       "heading": "Administration"
+    },
+    "thread": {
+      "answers":{
+        "empty": "There aren't any answers to this thread yet.",
+        "title": "Answers"
+      }
     }
   },
   "widgets": {
@@ -60,10 +66,12 @@
     },
     "actions": {
       "title": "Actions"
-    }
-    ,
-    "new-thread":{
+    },
+    "new-thread": {
       "title": "Create Thread",
+      "msg": {
+        "must-be-signed-in": "You must be signed in to start a new Thread."
+      },
       "form": {
         "inputs": {
           "title": {
@@ -77,7 +85,6 @@
             "label": "Text",
             "placeholder": "Something important..."
           }
-
         }
       },
       "alerts": {

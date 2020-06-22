@@ -1,8 +1,12 @@
 .content-flex-container {
-    display: flex;
-    flex-direction: column;
-    padding: 18px;
-    justify-content: center;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+mat-divider {
+  margin-bottom: 10px;
+}
