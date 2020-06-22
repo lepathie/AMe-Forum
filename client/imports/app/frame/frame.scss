@@ -5,6 +5,11 @@
   width: 100%;
   padding-top: 13.5px;
   margin-bottom: 14px;
+  overflow: auto;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+  text-overflow: ellipsis;
 
   > header {
     left: 7px;
