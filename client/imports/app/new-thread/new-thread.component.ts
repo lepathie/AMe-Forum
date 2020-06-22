@@ -23,7 +23,7 @@ export class NewThreadComponent implements OnInit{
         Tracker.autorun(() => {
             this.user = Meteor.user()
         })
-        
+
         this.threadForm = this.fb.group({
             title: '',
             text: ''
