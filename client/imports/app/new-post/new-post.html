@@ -10,6 +10,7 @@
         placeholder="{{ 'widgets.new-post.form.inputs.text.placeholder' | translate }}"
         formControlName="text"
         required
+        maxlength="5000"
       ></textarea>
     </mat-form-field>
     <button mat-flat-button color="accent" (click)="onSubmit()">

@@ -10,6 +10,7 @@
         placeholder="{{ 'widgets.new-thread.form.inputs.title.placeholder' | translate }}"
         formControlName="title"
         required
+        maxlength="200"
       />
     </mat-form-field>
     <mat-form-field>
@@ -22,6 +23,7 @@
         placeholder="{{ 'widgets.new-thread.form.inputs.inputtext.placeholder' | translate }}"
         formControlName="text"
         required
+        maxlength="1000"
       ></textarea>
     </mat-form-field>
     <button mat-flat-button color="accent" (click)="onSubmit()">
