@@ -1,6 +1,6 @@
 <div *ngFor="let post of posts | async | slice :0:1; trackBy: identify">
   <frame-component
-    title="{{ post.userId }} @ {{ post.postTime.toLocaleDateString() }}"
+    title="{{ post.userId }} @ {{ post.postTime | date: 'medium' }}"
   >
     <article>
       <main class="markdown-body" [innerHTML]="post.comment | marked"></main>
@@ -19,7 +19,7 @@
     <article>
       <header>
         <h2>{{ post.userId }}</h2>
-        <p>@ {{ post.postTime.toLocaleString() }}</p>
+        <p>@ {{ post.postTime | date: 'medium' }}</p>
       </header>
       <main [innerHTML]="post.comment | marked"></main>
     </article>

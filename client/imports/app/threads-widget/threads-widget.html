@@ -18,7 +18,7 @@
         <td>{{ thread.creator }}</td>
         <td>{{ thread.viewCounter }}</td>
         <td>{{ thread.followCounter }}</td>
-        <td>{{ thread.date.toLocaleString() }}</td>
+        <td>{{ thread.date | date: 'medium' }}</td>
       </tr>
     </tbody>
   </table>
