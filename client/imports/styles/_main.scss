@@ -1,13 +1,54 @@
 @import "colors";
-
-@import url("/assets/css/reset.css");
+// @import url("/assets/css/reset.css");
+@import url("/assets/css/normalize.css");
 @import url("/assets/css/typography.css");
+@import "theme";
 
 html {
   background-color: color(background, base);
   color: color(foreground, base);
 }
 
+html,
+body {
+  height: 100%;
+}
+
 a {
   color: color(accent, base);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  td,
+  th {
+    text-align: left;
+  }
+
+  thead {
+    th {
+      padding: 5px 5px;
+    }
+  }
+  tbody {
+    tr:first-child td:first-child {
+      border-top-left-radius: 2px;
+    }
+    tr:first-child td:last-child {
+      border-top-right-radius: 2px;
+    }
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 2px;
+    }
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 2px;
+    }
+    td {
+      padding: 12px 5px;
+      color: color(background, dark);
+      background: color(foreground, base);
+    }
+  }
 }

@@ -1,8 +1,12 @@
 import { NgModule } from "@angular/core"
 import { HomeComponent } from './home.component'
-import { FooterModule } from '../footer/footer.module'
-import { HeaderModule } from '../header/header.module'
 import { SharedModule } from '../shared/shared.module'
+import { ForumsWidgetModule } from '../forums-widget/forums-widget.module'
+import { LoginRegistrationModule } from '../login-registration/login-registration.module'
+import { MatButtonModule } from '@angular/material/button'
+import { FrameModule } from '../frame/frame.module'
+import { RouterModule } from '@angular/router'
+import { MatDividerModule } from '@angular/material/divider'
 
 @NgModule({
     declarations: [
@@ -10,8 +14,12 @@ import { SharedModule } from '../shared/shared.module'
     ],
     imports: [
         SharedModule,
-        HeaderModule,
-        FooterModule
+        LoginRegistrationModule,
+        ForumsWidgetModule,
+        MatButtonModule,
+        FrameModule,
+        RouterModule,
+        MatDividerModule
     ],
     exports: [
         HomeComponent

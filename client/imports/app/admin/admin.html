@@ -1,0 +1,13 @@
+<article>
+  <header>
+    <h1>
+      {{ 'pages.admin.heading' | translate }}
+    </h1>
+  </header>
+  <mat-divider></mat-divider>
+  <main>
+    <new-forum-component
+      *ngIf="user?.roles?.includes('admin') || user?.roles?.includes('mod')"
+    ></new-forum-component>
+  </main>
+</article>

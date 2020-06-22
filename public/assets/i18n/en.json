@@ -3,12 +3,115 @@
     "404": "Page Not Found"
   },
   "pages": {
-    "home": "Home"
+    "home": "Home",
+    "admin": {
+      "navigateTo": "Navigate to Adminstration",
+      "heading": "Administration"
+    },
+    "thread": {
+      "answers": {
+        "empty": "There aren't any answers to this thread yet.",
+        "title": "Answers"
+      }
+    }
   },
-  "blocks": {
-    "underDevelopmentNotice": {
-      "heading": "<h1>Under Development</h1>",
-      "content": "<p>This website is currently under heavy development and subject to sudden changes.</p><p>To follow the development, you can visit our <a href='https://github.com/lepathie/AMe-Forum'>GitHub-Repository</a>.</p>"
+  "widgets": {
+    "general": {
+      "we-support-markdown": "We support Markdown. 😉"
+    },
+    "forums": {
+      "title": "Forums",
+      "msg": {
+        "no-active-forums": "There currently aren't any active forums."
+      },
+      "table": {
+        "header": {
+          "name": "Name",
+          "description": "Description"
+        }
+      }
+    },
+    "threads": {
+      "title": "Threads",
+      "msg": {
+        "no-threads-in-forum": "There currently aren't any threads in this forum."
+      },
+      "table": {
+        "header": {
+          "name": "Name",
+          "creator": "Creator",
+          "views": "Views",
+          "follows": "Follows",
+          "date": "Created on"
+        }
+      }
+    },
+    "new-forum": {
+      "title": "Create Forum",
+      "form": {
+        "inputs": {
+          "title": {
+            "label": "Title",
+            "placeholder": "A forum"
+          },
+          "description": {
+            "label": "Description",
+            "placeholder": "This forum contains..."
+          },
+          "submit": {
+            "label": "Create"
+          }
+        }
+      }
+    },
+    "loginRegistration": {
+      "title": "Login / Registration"
+    },
+    "actions": {
+      "title": "Actions"
+    },
+    "new-thread": {
+      "title": "Create Thread",
+      "msg": {
+        "must-be-signed-in": "You must be signed in to start a new Thread."
+      },
+      "form": {
+        "inputs": {
+          "title": {
+            "label": "Title",
+            "placeholder": "A Thread"
+          },
+          "submit": {
+            "label": "Create"
+          },
+          "inputtext": {
+            "label": "Text",
+            "placeholder": "Something important..."
+          }
+        }
+      },
+      "alerts": {
+        "notcreated": "Could not create Thread",
+        "notfilled": "Please fill all fields",
+        "created": "Thread Created \""
+      }
+    },
+    "new-post": {
+      "title": "Create Post",
+      "msg": {
+        "must-be-signed-in": "You must be signed in to comment on this thread."
+      },
+      "form": {
+        "inputs": {
+          "submit": {
+            "label": "Create"
+          },
+          "text": {
+            "label": "Text",
+            "placeholder": "I like your style..."
+          }
+        }
+      }
     }
   }
 }

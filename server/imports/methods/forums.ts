@@ -13,22 +13,20 @@ Meteor.methods({
     createForum(_forumName: string, _description: string) {
 
     const user = Meteor.user()
-    if (user === null) {
+    if (!user) {
        throw new Meteor.Error("You are not logged in!")
-      // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
     }
-    if (_forumName === "") {
+    if (!Roles.userIsInRole(user._id, ['admin', 'mod'])) {
+      throw new Meteor.Error("missing permission")
+   }
+    if (!_forumName || _forumName === "") {
       throw new Meteor.Error("ForumName is required!")
     }
-    if (_description === "") {
-      throw new Meteor.Error("Description is required!")
-    }
 
-    return Forums.insert({
+    return Forums.collection.insert({
       active: true,
       name: _forumName,
       description: _description
     })
-    // const id = Forums.find({_id: "TrYfp7JsvQTitC6X7"},{_id:1})
   }
 })

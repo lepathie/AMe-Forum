@@ -1,0 +1,35 @@
+@import "../../styles/colors";
+
+.frame {
+  position: relative;
+  width: 100%;
+  padding-top: 13.5px;
+  margin-bottom: 14px;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+  text-overflow: ellipsis;
+
+  > header {
+    left: 7px;
+    top: 0px;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: color(background, base);
+    z-index: 1;
+
+    > h1 {
+      font-size: 27px;
+      color: color(accent, base);
+      margin: 0;
+    }
+  }
+
+  > main {
+    z-index: 0;
+    padding: 20px 15px;
+    border: 1px solid color(foreground, base);
+    border-radius: 2px;
+  }
+}

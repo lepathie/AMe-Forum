@@ -1,0 +1,23 @@
+<frame-component title="{{ 'widgets.forums.title' | translate }}">
+  <table *ngIf="(forums | async)?.length>0; else loading">
+    <thead>
+      <tr>
+        <th>{{ 'widgets.forums.table.header.name' | translate }}</th>
+        <th>{{ 'widgets.forums.table.header.description' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let forum of forums | async; trackBy: identify"
+        routerLink="/forum/{{ forum._id }}"
+      >
+        <td>{{ forum.name }}</td>
+        <td>{{ forum.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</frame-component>
+
+<ng-template #loading>
+  {{ 'widgets.forums.msg.no-active-forums' | translate }}
+</ng-template>
