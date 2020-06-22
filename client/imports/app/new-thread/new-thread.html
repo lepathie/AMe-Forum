@@ -1,15 +1,33 @@
 <frame-component title="{{ 'widgets.new-thread.title' | translate }}">
-    <form *ngIf="user; else loggedOut" [formGroup]="threadForm">
-      <mat-form-field>
-        <mat-label>{{ 'widgets.new-thread.form.inputs.title.label' | translate }}</mat-label>
-        <input matInput placeholder="{{ 'widgets.new-thread.form.inputs.title.placeholder' | translate }}" formControlName="title" required>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>{{ 'widgets.new-thread.form.inputs.inputtext.label' | translate }}</mat-label>
-        <textarea matInput placeholder="{{ 'widgets.new-thread.form.inputs.inputtext.placeholder' | translate }}" formControlName="text" required></textarea>
-      </mat-form-field>
-      <button mat-flat-button color="accent" (click)="onSubmit()">{{ 'widgets.new-thread.form.inputs.submit.label' | translate }}</button>
-    </form>
+  <form *ngIf="user; else loggedOut" [formGroup]="threadForm">
+    <mat-form-field>
+      <mat-label
+        >{{ 'widgets.new-thread.form.inputs.title.label' | translate
+        }}</mat-label
+      >
+      <input
+        matInput
+        placeholder="{{ 'widgets.new-thread.form.inputs.title.placeholder' | translate }}"
+        formControlName="title"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label
+        >{{ 'widgets.new-thread.form.inputs.inputtext.label' | translate
+        }}</mat-label
+      >
+      <textarea
+        matInput
+        placeholder="{{ 'widgets.new-thread.form.inputs.inputtext.placeholder' | translate }}"
+        formControlName="text"
+        required
+      ></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="accent" (click)="onSubmit()">
+      {{ 'widgets.new-thread.form.inputs.submit.label' | translate }}
+    </button>
+  </form>
 </frame-component>
 
 <ng-template #loggedOut>

@@ -11,14 +11,14 @@ Meteor.methods({
      */
     createPost(_threadId: string, _quotedPost: string, _quotedText: string, _content: string) {
     const user = Meteor.user()
-    if (user === null) {
+    if (!user) {
       throw new Meteor.Error("You are not logged in!")
       // auskommentiert, für tests, da man beim ausführen von default.ts kein user vorhanden ist
     }
-    if (_threadId === "") {
+    if (!_threadId || _threadId === "") {
       throw new Meteor.Error("ThreadId is required!")
     }
-    if (_content === "") {
+    if (!_content || _content === "") {
       throw new Meteor.Error("Content is required!")
     }
     const timestamp = new Date()

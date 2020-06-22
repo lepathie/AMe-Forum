@@ -25,8 +25,8 @@ describe(`NewForumComponent`, () => {
 
     it('should create the component', async(() => {
         const fixture = TestBed.createComponent(NewForumComponent)
-        const home = fixture.debugElement.componentInstance
-        expect(home).to.be.ok
+        const newForum = fixture.debugElement.componentInstance
+        expect(newForum).to.be.ok
     }))
 
 })

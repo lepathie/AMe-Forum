@@ -3,8 +3,8 @@ import { SharedModule } from '../shared/shared.module'
 import { PostsComponent } from './posts.component'
 import { FrameModule } from '../frame/frame.module'
 import { RouterModule } from '@angular/router'
-import { MarkedPipe } from '../shared/marked.pipe'
 import { MatDividerModule } from '@angular/material/divider'
+import { NewPostModule } from '../new-post/new-post.module'
 
 @NgModule({
     declarations: [
@@ -14,7 +14,8 @@ import { MatDividerModule } from '@angular/material/divider'
         SharedModule,
         FrameModule,
         RouterModule,
-        MatDividerModule
+        MatDividerModule,
+        NewPostModule
     ],
     exports: [
         PostsComponent

@@ -25,8 +25,8 @@ describe(`NewThreadComponent`, () => {
 
     it('should create the component', async(() => {
         const fixture = TestBed.createComponent(NewThreadComponent)
-        const home = fixture.debugElement.componentInstance
-        expect(home).to.be.ok
+        const newThread = fixture.debugElement.componentInstance
+        expect(newThread).to.be.ok
     }))
 
 })

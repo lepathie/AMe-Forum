@@ -31,7 +31,7 @@ export class NewThreadComponent implements OnInit{
 
     onSubmit() {
         const formValue = this.threadForm.value
-        if (formValue.title !== '' && formValue.text !== '') {
+        if (formValue.title && formValue.title !== '' && formValue.text && formValue.text !== '') {
             Meteor.call("createThread", this.forumId, formValue.title, formValue.text, (error, result) => {
                 if ( error ) {
                     throw new Meteor.Error(error.message)
@@ -49,6 +49,6 @@ export class NewThreadComponent implements OnInit{
     }
 
     private clearForm() {
-        this.threadForm.reset()
+        this.threadForm.reset({ title: '', text: ''})
     }
 }

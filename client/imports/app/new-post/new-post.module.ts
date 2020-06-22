@@ -1,16 +1,14 @@
 import { NgModule } from "@angular/core"
-import { NewThreadComponent } from './new-post.component'
+import { NewPostComponent } from './new-post.component'
 import { SharedModule } from '../shared/shared.module'
 import { ReactiveFormsModule } from '@angular/forms'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { FrameModule } from '../frame/frame.module'
-import { RouterModule } from '@angular/router'
 
 @NgModule({
     declarations: [
-        NewThreadComponent
+        NewPostComponent
     ],
     imports: [
         SharedModule,
@@ -20,7 +18,7 @@ import { RouterModule } from '@angular/router'
         FrameModule
     ],
     exports: [
-        NewThreadComponent
+        NewPostComponent
     ]
 })
-export class NewThreadModule { }
+export class NewPostModule { }
