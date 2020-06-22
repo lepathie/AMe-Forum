@@ -11,13 +11,15 @@ import { SharedModule } from '../shared/shared.module'
 import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 import { RouterTestingModule } from '@angular/router/testing'
 import { FrameComponent } from '../frame/frame.component'
+import { HomeModule } from './home.module'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent), MockComponent(FrameComponent)],
+            declarations: [MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent), MockComponent(FrameComponent)],
             imports: [
                 RouterTestingModule,
+                HomeModule,
                 SharedModule,
                 TranslateModule.forRoot({ })
             ]
