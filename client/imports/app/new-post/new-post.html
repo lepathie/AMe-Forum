@@ -1,0 +1,23 @@
+<frame-component title="{{ 'widgets.new-post.title' | translate }}">
+  <form *ngIf="user; else loggedOut" [formGroup]="postForm">
+    <mat-form-field>
+      <mat-label
+        >{{ 'widgets.new-post.form.inputs.text.label' | translate
+        }}</mat-label
+      >
+      <textarea
+        matInput
+        placeholder="{{ 'widgets.new-post.form.inputs.text.placeholder' | translate }}"
+        formControlName="text"
+        required
+      ></textarea>
+    </mat-form-field>
+    <button mat-flat-button color="accent" (click)="onSubmit()">
+      {{ 'widgets.new-post.form.inputs.submit.label' | translate }}
+    </button>
+  </form>
+</frame-component>
+
+<ng-template #loggedOut>
+  {{ 'widgets.new-post.msg.must-be-signed-in' | translate }}
+</ng-template>

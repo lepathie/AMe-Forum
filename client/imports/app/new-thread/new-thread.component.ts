@@ -14,7 +14,7 @@ import { Thread } from 'imports/models/thread'
 export class NewThreadComponent implements OnInit{
     @Input() forumId
 
-    myForm: FormGroup
+    threadForm: FormGroup
     user: Meteor.User
 
     constructor(private fb: FormBuilder) { }
@@ -24,20 +24,20 @@ export class NewThreadComponent implements OnInit{
             this.user = Meteor.user()
         })
 
-        this.myForm = this.fb.group({
+        this.threadForm = this.fb.group({
             title: '',
             text: ''
         })
     }
 
     onSubmit() {
-        const formValue = this.myForm.value
-        if (formValue.title !== '' && formValue.text !== '') {
+        const formValue = this.threadForm.value
+        if (formValue.title && formValue.title !== '' && formValue.text && formValue.text !== '') {
             Meteor.call("createThread", this.forumId, formValue.title, formValue.text, (error, result) => {
                 if ( error ) {
                     throw new Meteor.Error(error.message)
                 } else if ( result ) {
-                    Meteor.call("addPost", result, "", "", formValue.text, (postError, postResult) => {
+                    Meteor.call("createPost", result, "", "", formValue.text, (postError, postResult) => {
                         if (postError ) {
                             throw new Meteor.Error(postError.message)
                         } else if ( postResult ) {
@@ -50,6 +50,6 @@ export class NewThreadComponent implements OnInit{
     }
 
     private clearForm() {
-        this.myForm.reset()
+        this.threadForm.reset({ title: '', text: ''})
     }
 }

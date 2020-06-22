@@ -3,29 +3,30 @@
     title="{{ post.userId }} @ {{ post.postTime | date: 'medium' }}"
   >
     <article>
-      <main class="markdown-body" [innerHTML]="post.comment | marked"></main>
+      <main class="markdown-body" [innerHTML]="post.content | marked"></main>
     </article>
   </frame-component>
 </div>
 
-<frame-component
-  *ngIf="(posts | async)?.length > 1; else loading"
-  title="{{ 'pages.thread.answers.title' | translate }}"
->
-  <div
-    *ngFor="let post of posts | async | slice :1; trackBy: identify; let indexOfElement = index;"
-  >
-    <mat-divider *ngIf="indexOfElement > 0"></mat-divider>
-    <article>
-      <header>
-        <h2>{{ post.userId }}</h2>
-        <p>@ {{ post.postTime | date: 'medium' }}</p>
-      </header>
-      <main [innerHTML]="post.comment | marked"></main>
-    </article>
-  </div>
+<frame-component title="{{ 'pages.thread.answers.title' | translate }}">
+  <ng-container *ngIf="(posts | async)?.length > 1; else loading">
+    <ng-container
+      *ngFor="let post of posts | async | slice :1; trackBy: identify; let indexOfElement = index;"
+    >
+      <mat-divider *ngIf="indexOfElement > 0"></mat-divider>
+      <article>
+        <header>
+          <h2>{{ post.userId }}</h2>
+          <p>@ {{ post.postTime | date: 'medium' }}</p>
+        </header>
+        <main [innerHTML]="post.content | marked"></main>
+      </article>
+    </ng-container>
+  </ng-container>
 </frame-component>
 
+<new-post-component [threadId]="threadId"></new-post-component>
+
 <ng-template #loading>
-  <p>{{ 'pages.thread.answers.empty' | translate }}</p>
+  {{ 'pages.thread.answers.empty' | translate }}
 </ng-template>

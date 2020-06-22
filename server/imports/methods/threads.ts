@@ -13,10 +13,10 @@ Meteor.methods({
       if (!user) {
         throw new Meteor.Error("You are not logged in!")
       }
-      if (_forumId === "") {
+      if (!_forumId || _forumId === "") {
         throw new Meteor.Error("ForumId is required!")
       }
-      if (_threadName === "") {
+      if (!_threadName || _threadName === "") {
         throw new Meteor.Error("ThreadName is required!")
       }
       const timestamp = new Date()

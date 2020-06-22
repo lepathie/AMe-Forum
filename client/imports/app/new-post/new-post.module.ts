@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core"
-import { NewThreadComponent } from './new-thread.component'
+import { NewPostComponent } from './new-post.component'
 import { SharedModule } from '../shared/shared.module'
 import { ReactiveFormsModule } from '@angular/forms'
 import { MatInputModule } from '@angular/material/input'
@@ -8,7 +8,7 @@ import { FrameModule } from '../frame/frame.module'
 
 @NgModule({
     declarations: [
-        NewThreadComponent
+        NewPostComponent
     ],
     imports: [
         SharedModule,
@@ -18,7 +18,7 @@ import { FrameModule } from '../frame/frame.module'
         FrameModule
     ],
     exports: [
-        NewThreadComponent
+        NewPostComponent
     ]
 })
-export class NewThreadModule { }
+export class NewPostModule { }
