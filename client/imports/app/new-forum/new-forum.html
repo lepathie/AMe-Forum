@@ -2,11 +2,11 @@
     <form [formGroup]="CreateTread">
       <mat-form-field>
         <mat-label>{{ 'widgets.new-forum.form.inputs.title.label' | translate }}</mat-label>
-        <input matInput placeholder="{{ 'widgets.new-forum.form.inputs.title.placeholder' | translate }}" formControlName="title" required> 
+        <input matInput placeholder="{{ 'widgets.new-forum.form.inputs.title.placeholder' | translate }}" formControlName="title" required maxlength="200"> 
       </mat-form-field>
       <mat-form-field>
         <mat-label>{{ 'widgets.new-forum.form.inputs.description.label' | translate }}</mat-label>
-        <textarea matInput placeholder="{{ 'widgets.new-forum.form.inputs.description.placeholder' | translate }}" formControlName="description"></textarea>
+        <textarea matInput placeholder="{{ 'widgets.new-forum.form.inputs.description.placeholder' | translate }}" formControlName="description" maxlength="1000"></textarea>
       </mat-form-field>
       <button mat-flat-button color="accent" (click)="onSubmit()">{{ 'widgets.new-forum.form.inputs.submit.label' | translate }}</button>
     </form>
