@@ -9,12 +9,12 @@ if (Forums.find().cursor.count() === 0) {
     Forums.insert(forum)
   })
   // Threads.insert({ _id: "TestId", forumId: "TestId" , name: "testThread", viewCounter: 0, followCounter: 0, date: new Date(), creator: "auto"})
-  // Posts.insert({ _id: "TestId", threadId: "TestId", quotedPost: "", textQuoted: "", comment: "TestKommentar", userId: "auto", postTime: new Date()})
+  // Posts.insert({ _id: "TestId", threadId: "TestId", quotedPost: "", textQuoted: "", content: "TestKommentar", userId: "auto", postTime: new Date()})
 
   // Methoden um zum erstellen eines Forums:
   // const idforum = Meteor.call("createForum", "Forum1", "Testforum", "TestModeratorId")
   // const idthread = Meteor.call("createThread", "cwRruXbjRuD47PTf3", "Testthread")
-  // const idpost = Meteor.call("addPost", "T9aLNqvAjfL87MoGW", "", "", "Kommentar........")
+  // const idpost = Meteor.call("createPost", "T9aLNqvAjfL87MoGW", "", "", "Kommentar........")
 }
 // Default users
 if (Meteor.users.find().count() === 0) {

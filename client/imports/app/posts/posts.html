@@ -3,7 +3,7 @@
     title="{{ post.userId }} @ {{ post.postTime | date: 'medium' }}"
   >
     <article>
-      <main class="markdown-body" [innerHTML]="post.comment | marked"></main>
+      <main class="markdown-body" [innerHTML]="post.content | marked"></main>
     </article>
   </frame-component>
 </div>
@@ -21,7 +21,7 @@
         <h2>{{ post.userId }}</h2>
         <p>@ {{ post.postTime | date: 'medium' }}</p>
       </header>
-      <main [innerHTML]="post.comment | marked"></main>
+      <main [innerHTML]="post.content | marked"></main>
     </article>
   </div>
 </frame-component>
