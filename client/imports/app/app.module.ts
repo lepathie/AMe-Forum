@@ -22,6 +22,9 @@ import { NewThreadModule } from './new-thread/new-thread.module'
 import { AdminComponent } from './admin/admin.component'
 import { AdminModule } from './admin/admin.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ThreadComponent } from './thread/thread.component'
+import { ThreadModule } from './thread/thread.module'
+import { MarkedPipe } from './shared/marked.pipe'
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json')
@@ -49,9 +52,14 @@ export function createTranslateLoader(http: HttpClient) {
                 canActivate: [AuthGuard]
             },
             {
+                path: 'forum/:forumId/thread/:id',
+                component: ThreadComponent
+            },
+            {
                 path: 'forum/:id',
                 component: ForumComponent
-            },
+            }
+            ,
             {
                 path: 'new-forum',
                 component: NewForumComponent
@@ -82,7 +90,8 @@ export function createTranslateLoader(http: HttpClient) {
         PageNotFoundModule,
         NewThreadModule,
         AdminModule,
-        NewForumModule
+        NewForumModule,
+        ThreadModule
     ],
     declarations: [
         AppComponent

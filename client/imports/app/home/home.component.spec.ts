@@ -11,12 +11,14 @@ import { SharedModule } from '../shared/shared.module'
 import { LoginRegistrationComponent } from '../login-registration/login-registration.component'
 import { RouterTestingModule } from '@angular/router/testing'
 import { FrameComponent } from '../frame/frame.component'
+import { MatDividerModule } from '@angular/material/divider'
 
 describe(`HomeComponent`, () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [HomeComponent, MockComponent(ForumsWidgetComponent), MockComponent(ForumsWidgetComponent), MockComponent(LoginRegistrationComponent), MockComponent(FrameComponent)],
             imports: [
+                MatDividerModule,
                 RouterTestingModule,
                 SharedModule,
                 TranslateModule.forRoot({ })

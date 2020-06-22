@@ -12,13 +12,13 @@
     <tbody>
       <tr
         *ngFor="let thread of threads | async; trackBy: identify"
-        routerLink="/forum/{{ forumID }}/{{ thread._id }}"
+        routerLink="/forum/{{ forumId }}/thread/{{ thread._id }}"
       >
         <td>{{ thread.name }}</td>
         <td>{{ thread.creator }}</td>
         <td>{{ thread.viewCounter }}</td>
         <td>{{ thread.followCounter }}</td>
-        <td>{{ thread.date }}</td>
+        <td>{{ thread.date | date: 'medium' }}</td>
       </tr>
     </tbody>
   </table>

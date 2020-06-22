@@ -1,20 +1,28 @@
-<aside>
-  <login-registration-component></login-registration-component>
-  <frame-component
-    *ngIf="user"
-    title="{{ 'widgets.actions.title' | translate }}"
-  >
-    <button
-      *ngIf="user?.roles?.includes('admin')"
-      [routerLink]="['/admin']"
-      style="width: 100%;"
-      mat-flat-button
-      color="accent"
-    >
-      {{ 'pages.admin.navigateTo' | translate }}
-    </button>
-  </frame-component>
-</aside>
-<main>
-  <forums-widget></forums-widget>
-</main>
+<article>
+  <header>
+    <h1>{{ 'pages.home' | translate }}</h1>
+    <mat-divider></mat-divider>
+  </header>
+  <main>
+    <aside>
+      <login-registration-component></login-registration-component>
+      <frame-component
+        *ngIf="user"
+        title="{{ 'widgets.actions.title' | translate }}"
+      >
+        <button
+          *ngIf="user?.roles?.includes('admin')"
+          [routerLink]="['/admin']"
+          style="width: 100%;"
+          mat-flat-button
+          color="accent"
+        >
+          {{ 'pages.admin.navigateTo' | translate }}
+        </button>
+      </frame-component>
+    </aside>
+    <main>
+      <forums-widget></forums-widget>
+    </main>
+  </main>
+</article>
