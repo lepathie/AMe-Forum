@@ -29,4 +29,29 @@ describe(`ForumComponent`, () => {
         const forum = fixture.debugElement.componentInstance
         expect(forum).to.be.ok
     }))
+
+    // TODO: Mock the subscription (Otherwise expected to 404)
+    /*it(`should contain an '<h1>'` , async(() => {
+        const fixture = TestBed.createComponent(ForumComponent)
+        fixture.detectChanges()
+        const heading = fixture.debugElement.query(By.css('h1'))
+
+        expect(heading).to.be.ok
+    }))
+
+    it(`should contain an '<header>'` , async(() => {
+        const fixture = TestBed.createComponent(ForumComponent)
+        fixture.detectChanges()
+        const header = fixture.debugElement.query(By.css('header'))
+
+        expect(header).to.be.ok
+    }))
+
+    it(`should contain an '<mat-divider>'` , async(() => {
+        const fixture = TestBed.createComponent(ForumComponent)
+        fixture.detectChanges()
+        const divider = fixture.debugElement.query(By.css('mat-divider'))
+
+        expect(divider).to.be.ok
+    }))*/
 })
