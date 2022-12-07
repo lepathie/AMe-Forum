@@ -29,7 +29,7 @@
     "angular2-meteor-accounts-ui": "^1.0.0",
     "bcrypt": "^4.0.1",
     "core-js": "2.5.7",
-    "lint": "^0.7.0",
+    "lint": "^0.8.8",
     "marked": "^1.1.0",
     "meteor-node-stubs": "1.0.0",
     "meteor-rxjs": "0.4.14",
